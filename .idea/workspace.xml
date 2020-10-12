@@ -15,14 +15,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7165cd0-f933-48d6-97a5-2c483a9e7f52" name="Default Changelist" comment="Mise en place de l'app">
-      <change beforePath="$PROJECT_DIR$/.idea/euphony-r-s.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/euphony-r-s.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="c7165cd0-f933-48d6-97a5-2c483a9e7f52" name="Default Changelist" comment="Create DataBase + Collaboraters / Quotations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +198,7 @@
       <workItem from="1600188663749" duration="3316000" />
       <workItem from="1600244951540" duration="47351000" />
       <workItem from="1602494199418" duration="3052000" />
-      <workItem from="1602498245551" duration="6870000" />
+      <workItem from="1602498245551" duration="16798000" />
     </task>
     <task id="LOCAL-00001" summary="Install Symfo 4+ React (Last)">
       <created>1600180506881</created>
@@ -261,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602498412449</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Create DataBase + Collaboraters / Quotations">
+      <created>1602505600580</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1602505600580</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +288,8 @@
     <MESSAGE value="Add Router-dom + Navbar adjustment" />
     <MESSAGE value="Factorisation Router-dom for/with Material-UI + Navbar adjustment" />
     <MESSAGE value="Mise en place de l'app" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise en place de l'app" />
+    <MESSAGE value="Create DataBase + Collaboraters / Quotations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create DataBase + Collaboraters / Quotations" />
   </component>
   <component name="WindowStateProjectService">
     <state width="2085" height="388" key="GridCell.Tab.0.bottom" timestamp="1600338025523">
@@ -313,10 +316,10 @@
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
     <state x="-1628" y="-374" key="SettingsEditor/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602498270860" />
-    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2" timestamp="1602498414986">
+    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2" timestamp="1602505603596">
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
-    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602498414986" />
+    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602505603596" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.967/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600275782595" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.973/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600180509027" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.975/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600361413860" />
