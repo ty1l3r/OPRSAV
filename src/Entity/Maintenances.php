@@ -31,6 +31,7 @@ class Maintenances
 
     /**
      * @ORM\ManyToMany(targetEntity=Users::class, inversedBy="maintenances")
+     * @Groups({"maintenance_read"})
      */
     private $technician;
 

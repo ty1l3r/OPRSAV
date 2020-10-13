@@ -10,10 +10,12 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=UsersRepository::class)
  * @ApiResource(
+ *     denormalizationContext={"disable_type_enforcement"=true},
  *     normalizationContext={"groups"={"users_read"}},
  *     attributes={"order": {"lastName":"ASC"}},
  *      subresourceOperations={
@@ -33,35 +35,59 @@ class Users implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Assert\NotBlank(message="L'email est obligatoire")
+     * @Assert\Email(
+     *     message = "L'email'{{ value }}' n'est pas valide.",
+     *     checkMX = true
+     * )
      */
     private $email;
 
     /**
      * @ORM\Column(type="json")
+     * @Assert\NotBlank(message="L'ajout d'un rôle est obligatoire")
      */
     private $roles = [];
 
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
+     * @Assert\NotBlank(message="vous devez choisir un mot de passe")
      */
     private $password;
 
     /**
      * @ORM\Column(type="string", length=100)
      * @Groups({"users_read"})
+     * @Assert\NotBlank(message="N'oubliez pas le prénom")
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 50,
+     *      minMessage = "Le prénom doit avoir au moins {{ limit }} lettres",
+     *      maxMessage = "Le prénom ne doit pas faire plus de {{ limit }} lettres",
+     *      allowEmptyString = false
+     * )
      */
     private $firstName;
 
     /**
      * @ORM\Column(type="string", length=100)
      * @Groups({"users_read"})
+     * @Assert\NotBlank(message="N'oubliez pas le nom de famille")
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 50,
+     *      minMessage = "Le nom doit avoir au moins {{ limit }} lettres",
+     *      maxMessage = "Le nom ne doit pas faire plus de {{ limit }} lettres",
+     *      allowEmptyString = false
+     * )
      */
     private $lastName;
 
     /**
      * @ORM\Column(type="string", length=100)
      * @Groups({"users_read"})
+     * @Assert\NotBlank(message="La selection d'un secteur est obligatoire")
      */
     private $sector;
 
@@ -94,7 +120,6 @@ class Users implements UserInterface
     }
 
 
-
     public function getId(): ?int
     {
         return $this->id;
@@ -119,7 +144,7 @@ class Users implements UserInterface
      */
     public function getUsername(): string
     {
-        return (string) $this->email;
+        return (string)$this->email;
     }
 
     /**
@@ -128,7 +153,6 @@ class Users implements UserInterface
     public function getRoles(): array
     {
         $roles = $this->roles;
-        // guarantee every user at least has ROLE_USER
         $roles[] = 'ROLE_USER';
 
         return array_unique($roles);
@@ -146,7 +170,7 @@ class Users implements UserInterface
      */
     public function getPassword(): string
     {
-        return (string) $this->password;
+        return (string)$this->password;
     }
 
     public function setPassword(string $password): self
@@ -326,10 +350,6 @@ class Users implements UserInterface
 
         return $this;
     }
-
-
-
-
 
 
 }
