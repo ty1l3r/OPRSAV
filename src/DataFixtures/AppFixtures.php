@@ -2,10 +2,8 @@
 
 namespace App\DataFixtures;
 
-use App\Entity\Equipments;
+
 use App\Entity\Invoices;
-use App\Entity\Maintenances;
-use App\Entity\Pose;
 use App\Entity\Users;
 use App\Entity\Quotations;
 use Doctrine\Bundle\FixturesBundle\Fixture;
@@ -53,15 +51,37 @@ class AppFixtures extends Fixture
             if ($sector === 'seller' ){
                 for ($q = 0; $q < mt_rand(5,20); $q++){
                     $quotations = new Quotations();
-                    $montant = $faker->randomElement(2,250, 35000);
+                    $montant = $faker->randomFloat(2,250, 35000);
+                    $statu = $faker->randomElement(['Accepté',
+                                                    'Refusé',
+                                                    'En attente',
+                                                    'Réglé']);
+                    $date = $faker->dateTimeBetween('-6 months');
                     $quotations
                         ->setAmount($montant)
-                        ->setSentAt($faker->dateTimeBetween('-6 months'))
-                        ->setStatus($faker->randomElement(['ACCEPT&Egrave;', 'REFUS&Egrave;', 'EN ATTENTE']))
+                        ->setSentAt($date)
+                        ->setStatus($statu)
                         ->setAuthor($user)
                         ->setChrono($chrono);
                     $chrono++;
                     $manager->persist($quotations);
+
+
+                    if ( $statu === 'Réglé' ){
+                        $chronoInvoices = 1;
+                        $invoice = new Invoices();
+                        $invoice    -> setAmount($montant)
+                                    -> setStatus($faker->randomElement([ 'En attente de réglement',
+                                                                        'Encaissé',
+                                        ]))
+                                    ->setSentAt($date)
+                                    ->setSeller($user)
+                                    ->setChrono($chronoInvoices);
+                        $chronoInvoices++;
+                        $manager->persist($invoice);
+
+                    }
+
                 }
             }
 

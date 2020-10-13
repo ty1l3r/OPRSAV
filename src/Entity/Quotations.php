@@ -2,11 +2,21 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
+use ApiPlatform\Core\Annotation\ApiSubresource;
 use App\Repository\QuotationsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=QuotationsRepository::class)
+ * @ApiResource(
+ *     normalizationContext={"groups"={"quotations_read"}},
+ *     attributes={
+ *     "pagination_items_per_page"=20,
+ *     "order": {"sentAt":"ASC"}
+ *     }
+ *     )
  */
 class Quotations
 {
@@ -19,22 +29,26 @@ class Quotations
 
     /**
      * @ORM\Column(type="float")
+     * @Groups({"quotations_read"})
      */
     private $amount;
 
     /**
      * @ORM\Column(type="datetime")
+     * @Groups({"quotations_read"})
      */
     private $sentAt;
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Groups({"quotations_read"})
      */
     private $status;
 
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"quotations_read"})
      */
     private $chrono;
 

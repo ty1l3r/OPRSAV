@@ -2,13 +2,22 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\PoseRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=PoseRepository::class)
+ * @ApiResource(
+ *     normalizationContext={"groups"={"pose_read"}},
+ *     attributes={
+ *     "pagination_items_per_page"=5,
+ *     "order": {"date":"ASC"}
+ *     }
+ *     )
  */
 class Pose
 {
@@ -16,16 +25,19 @@ class Pose
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"pose_read"})
      */
     private $id;
 
     /**
      * @ORM\ManyToMany(targetEntity=Users::class, inversedBy="poses")
+     * @Groups({"pose_read"})
      */
     private $technician;
 
     /**
      * @ORM\Column(type="datetime")
+     * @Groups({"pose_read"})
      */
     private $date;
 

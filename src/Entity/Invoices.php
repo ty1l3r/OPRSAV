@@ -2,11 +2,20 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\InvoicesRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=InvoicesRepository::class)
+ * @ApiResource(
+ *     normalizationContext={"groups"={"invoices_read"}},
+ *     attributes={
+ *     "pagination_items_per_page"=20,
+ *     "order": {"sentAt":"ASC"}
+ *     }
+ *     )
  */
 class Invoices
 {
@@ -14,26 +23,31 @@ class Invoices
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"invoices_read"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups({"invoices_read"})
      */
     private $amount;
 
     /**
      * @ORM\Column(type="datetime")
+     * @Groups({"invoices_read"})
      */
     private $sentAt;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"invoices_read"})
      */
     private $status;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"invoices_read"})
      */
     private $chrono;
 

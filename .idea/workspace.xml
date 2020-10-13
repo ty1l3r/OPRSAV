@@ -15,9 +15,17 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7165cd0-f933-48d6-97a5-2c483a9e7f52" name="Default Changelist" comment="Create DataBase + Collaboraters / Quotations">
+    <list default="true" id="c7165cd0-f933-48d6-97a5-2c483a9e7f52" name="Default Changelist" comment="Create DataBase + Entities + Faker">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/api_platform.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/api_platform.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes/api_platform.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/api_platform.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Equipments.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Equipments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Invoices.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Invoices.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Maintenances.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Maintenances.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Pose.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Pose.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Quotations.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Quotations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Users.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +206,7 @@
       <workItem from="1600188663749" duration="3316000" />
       <workItem from="1600244951540" duration="47351000" />
       <workItem from="1602494199418" duration="3052000" />
-      <workItem from="1602498245551" duration="16798000" />
+      <workItem from="1602498245551" duration="26054000" />
     </task>
     <task id="LOCAL-00001" summary="Install Symfo 4+ React (Last)">
       <created>1600180506881</created>
@@ -263,7 +271,21 @@
       <option name="project" value="LOCAL" />
       <updated>1602505600580</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Create DataBase + Entities + Faker">
+      <created>1602515963675</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1602515963675</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Create DataBase + Entities + Faker">
+      <created>1602515990397</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1602515990397</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +311,8 @@
     <MESSAGE value="Factorisation Router-dom for/with Material-UI + Navbar adjustment" />
     <MESSAGE value="Mise en place de l'app" />
     <MESSAGE value="Create DataBase + Collaboraters / Quotations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create DataBase + Collaboraters / Quotations" />
+    <MESSAGE value="Create DataBase + Entities + Faker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create DataBase + Entities + Faker" />
   </component>
   <component name="WindowStateProjectService">
     <state width="2085" height="388" key="GridCell.Tab.0.bottom" timestamp="1600338025523">
@@ -316,10 +339,10 @@
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
     <state x="-1628" y="-374" key="SettingsEditor/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602498270860" />
-    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2" timestamp="1602505603596">
+    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2" timestamp="1602516039846">
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
-    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602505603596" />
+    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602516039846" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.967/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600275782595" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.973/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600180509027" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.975/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600361413860" />
@@ -332,9 +355,10 @@
       <screen x="3600" y="-259" width="3440" height="1417" />
     </state>
     <state x="4364" y="52" width="598" height="735" key="find.popup/0.23.1680.967/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600329827011" />
-    <state x="4328" y="51" width="670" height="676" key="search.everywhere.popup" timestamp="1600335037857">
-      <screen x="3600" y="-259" width="3440" height="1417" />
+    <state x="-2712" y="-392" width="670" height="645" key="search.everywhere.popup" timestamp="1602519374097">
+      <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
+    <state x="-2712" y="-392" width="670" height="645" key="search.everywhere.popup/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602519374097" />
     <state x="4328" y="51" width="670" height="676" key="search.everywhere.popup/0.23.1680.971/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600335037857" />
   </component>
 </project>

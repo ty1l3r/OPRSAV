@@ -2,14 +2,25 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
+use ApiPlatform\Core\Annotation\ApiSubresource;
 use App\Repository\UsersRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=UsersRepository::class)
+ * @ApiResource(
+ *     normalizationContext={"groups"={"users_read"}},
+ *     attributes={"order": {"lastName":"ASC"}},
+ *      subresourceOperations={
+ *          "invoices_get_subresource"= { "path"="/collaborateur/{id}/factures"},
+ *          "quotations_get_subresource"= { "path"="/collaborateur/{id}/devis"}
+ *      }
+ *     )
  */
 class Users implements UserInterface
 {
@@ -38,26 +49,31 @@ class Users implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=100)
+     * @Groups({"users_read"})
      */
     private $firstName;
 
     /**
      * @ORM\Column(type="string", length=100)
+     * @Groups({"users_read"})
      */
     private $lastName;
 
     /**
      * @ORM\Column(type="string", length=100)
+     * @Groups({"users_read"})
      */
     private $sector;
 
     /**
      * @ORM\OneToMany(targetEntity=Quotations::class, mappedBy="author")
+     * @ApiSubresource()
      */
     private $quotations;
 
     /**
      * @ORM\OneToMany(targetEntity=Invoices::class, mappedBy="seller")
+     * @ApiSubresource()
      */
     private $invoices;
 

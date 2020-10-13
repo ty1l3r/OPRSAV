@@ -7,10 +7,17 @@ use App\Repository\EquipmentsRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=EquipmentsRepository::class)
- * @ApiResource
+ * @ApiResource(
+ *     normalizationContext={"groups"={"equipments_read"}},
+ *     attributes={
+ *     "pagination_items_per_page"=5,
+ *     "order": {"name":"ASC"}
+ *     }
+ *     )
  */
 class Equipments
 {
@@ -18,31 +25,38 @@ class Equipments
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"equipments_read"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"equipments_read"})
      */
     private $ref;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"equipments_read"})
      */
     private $picture;
 
+
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"equipments_read"})
      */
     private $name;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups({"equipments_read"})
      */
     private $price;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"equipments_read"})
      */
     private $stock;
 

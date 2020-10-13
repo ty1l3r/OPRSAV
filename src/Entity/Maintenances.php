@@ -2,13 +2,22 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\MaintenancesRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=MaintenancesRepository::class)
+ * @ApiResource(
+ *     normalizationContext={"groups"={"maintenance_read"}},
+ *     attributes={
+ *      "paginationItemsPerPage"=20,
+ *      "order": {"date":"ASC"}
+ *     }
+ * )
  */
 class Maintenances
 {
@@ -16,6 +25,7 @@ class Maintenances
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"maintenance_read"})
      */
     private $id;
 
@@ -26,11 +36,13 @@ class Maintenances
 
     /**
      * @ORM\Column(type="datetime")
+     * @Groups({"maintenance_read"})
      */
     private $date;
 
     /**
      * @ORM\ManyToMany(targetEntity=Equipments::class, inversedBy="maintenances")
+     * @Groups({"maintenance_read"})
      */
     private $products;
 
