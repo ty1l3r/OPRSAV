@@ -15,26 +15,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7165cd0-f933-48d6-97a5-2c483a9e7f52" name="Default Changelist" comment="Create EO Entities + API Basics">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Events/AddMaintenances.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Events/JwtCreatedSubsciber.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Events/PasswordEncoderSubscriber.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/euphony-r-s.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/euphony-r-s.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="c7165cd0-f933-48d6-97a5-2c483a9e7f52" name="Default Changelist" comment="Create Asserts + Events [PasswordEncoder] + Auth JWT">
+      <change afterPath="$PROJECT_DIR$/src/Doctrine/CurrentUserExtension.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Maintenances.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Maintenances.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/MaintenancesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/MaintenancesRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Quotations.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Quotations.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +205,7 @@
       <workItem from="1600188663749" duration="3316000" />
       <workItem from="1600244951540" duration="47351000" />
       <workItem from="1602494199418" duration="3052000" />
-      <workItem from="1602498245551" duration="53503000" />
+      <workItem from="1602498245551" duration="61201000" />
     </task>
     <task id="LOCAL-00001" summary="Install Symfo 4+ React (Last)">
       <created>1600180506881</created>
@@ -307,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602584793099</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Create Asserts + Events [PasswordEncoder] + Auth JWT">
+      <created>1602624331334</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1602624331334</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +326,8 @@
     <MESSAGE value="Create DataBase + Collaboraters / Quotations" />
     <MESSAGE value="Create DataBase + Entities + Faker" />
     <MESSAGE value="Create EO Entities + API Basics" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create EO Entities + API Basics" />
+    <MESSAGE value="Create Asserts + Events [PasswordEncoder] + Auth JWT" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Asserts + Events [PasswordEncoder] + Auth JWT" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1416" y="-329" key="#Inspections" timestamp="1602598687738">
@@ -370,14 +362,22 @@
     </state>
     <state width="2085" height="388" key="GridCell.Tab.0.right/0.23.1680.972/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600338025523" />
     <state width="1817" height="408" key="GridCell.Tab.0.right/0.23.1680.973/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600179632902" />
+    <state x="-1187" y="-84" key="NewPhpFileDialog" timestamp="1602679979409">
+      <screen x="-3440" y="-687" width="3440" height="1350" />
+    </state>
+    <state x="-1187" y="-84" key="NewPhpFileDialog/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602679979409" />
     <state x="-1628" y="-374" key="SettingsEditor" timestamp="1602498270860">
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
     <state x="-1628" y="-374" key="SettingsEditor/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602498270860" />
-    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2" timestamp="1602584795401">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1602680609137">
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
-    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602584795401" />
+    <state width="500" height="445" key="SwitcherDM/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602680609137" />
+    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2" timestamp="1602624336126">
+      <screen x="-3440" y="-687" width="3440" height="1350" />
+    </state>
+    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602624336126" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.967/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600275782595" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.973/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600180509027" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.975/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600361413860" />

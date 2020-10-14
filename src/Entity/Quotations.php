@@ -14,7 +14,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *     normalizationContext={"groups"={"quotations_read"}},
  *     attributes={
  *     "pagination_items_per_page"=20,
- *     "order": {"sentAt":"ASC"}
+ *     "order": {"sentAt":"DESC"}
  *     }
  *     )
  */
