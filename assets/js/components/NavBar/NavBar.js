@@ -71,7 +71,7 @@ const NavBar = () => {
                                     <HomeIcon className={classes.color}/>
                                 </Avatar>
                             </ListItemIcon>
-                            <ListItemText className={classes.align} primary="ACCUEIL"/>
+                            <ListItemText className={classes.align} primary="Accueil"/>
                         </ListItem>
                         <Divider/>
 
@@ -82,7 +82,7 @@ const NavBar = () => {
                                     <AccountBoxIcon className={classes.color}/>
                                 </Avatar>
                             </ListItemIcon>
-                            <ListItemText className={classes.align} primary="&Agrave; PROPOS"/>
+                            <ListItemText className={classes.align} primary="Créer un devis"/>
                         </ListItem>
                         <Divider/>
                         {/*--------------------------------------------------------------------------------*/}
@@ -92,7 +92,7 @@ const NavBar = () => {
                                     <BuildIcon className={classes.color}/>
                                 </Avatar>
                             </ListItemIcon>
-                            <ListItemText className={classes.align} primary="SERVICES"/>
+                            <ListItemText className={classes.align} primary="Créer une facture"/>
                         </ListItem>
                         <Divider/>
                         {/*--------------------------------------------------------------------------------*/}
@@ -102,7 +102,7 @@ const NavBar = () => {
                                     <ImportantDevicesIcon className={classes.color}/>
                                 </Avatar>
                             </ListItemIcon>
-                            <ListItemText className={classes.align} primary="PORTOFOLIO"/>
+                            <ListItemText className={classes.align} primary="Liste des devis"/>
                         </ListItem>
                         <Divider/>
                         {/*--------------------------------------------------------------------------------*/}
@@ -112,7 +112,7 @@ const NavBar = () => {
                                     <ThumbUpAltIcon className={classes.color}/>
                                 </Avatar>
                             </ListItemIcon>
-                            <ListItemText className={classes.align} primary="CLIENTS"/>
+                            <ListItemText className={classes.align} primary="Liste des factures"/>
                         </ListItem>
                         <Divider/>
                         {/*--------------------------------------------------------------------------------*/}
@@ -122,7 +122,7 @@ const NavBar = () => {
                                     <ContactPhoneIcon className={classes.color}/>
                                 </Avatar>
                             </ListItemIcon>
-                            <ListItemText className={classes.align} primary="CONTACTS"/>
+                            <ListItemText className={classes.align} primary="A Propos"/>
                         </ListItem>
                     </List>
                 </Drawer>

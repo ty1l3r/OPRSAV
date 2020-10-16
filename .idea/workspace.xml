@@ -15,10 +15,27 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7165cd0-f933-48d6-97a5-2c483a9e7f52" name="Default Changelist" comment="Create Asserts + Events [PasswordEncoder] + Auth JWT">
-      <change afterPath="$PROJECT_DIR$/src/Doctrine/CurrentUserExtension.php" afterDir="false" />
+    <list default="true" id="c7165cd0-f933-48d6-97a5-2c483a9e7f52" name="Default Changelist" comment="Create Events (lifeCycle) + DoctrineRequest">
+      <change afterPath="$PROJECT_DIR$/assets/js/Pages/Accueil/Accueil.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Pages/Accueil/Accueil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Pages/Login/LoginPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Pages/Sellers/ActuSellers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Pages/Sellers/CreateInvoices.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Pages/Sellers/CreateQuotations.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Pages/Sellers/HomeSellers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Pages/Sellers/ReadQuotations.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Pages/Sellers/Sellers.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Quotations.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Quotations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/boostrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/boostrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Routing.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Routing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/NavBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/NavBar/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/NavBar/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/NavBar/Navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/Pages/Accueil/Accueil.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/Pages/Accueil/Accueil.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,19 +195,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/js" />
-      <recent name="$PROJECT_DIR$/assets/js/components" />
-      <recent name="$PROJECT_DIR$/assets/js/components/Styles/Carousel/images" />
-      <recent name="$PROJECT_DIR$/assets/js/components/Styles/Carousel" />
-      <recent name="$PROJECT_DIR$/assets/js/components/Styles" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/js/components/Styles/Carousel/js" />
       <recent name="$PROJECT_DIR$/assets/js/components/Styles/Carousel/images" />
       <recent name="$PROJECT_DIR$/assets/js/components/Styles/Carousel/css/fonts" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/vendor" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/js" />
+      <recent name="$PROJECT_DIR$/assets/js/components" />
+      <recent name="$PROJECT_DIR$/assets/js/components/Styles/Carousel/images" />
+      <recent name="$PROJECT_DIR$/assets/js/components/Styles/Carousel" />
+      <recent name="$PROJECT_DIR$/assets/js/components/Styles" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -205,7 +222,9 @@
       <workItem from="1600188663749" duration="3316000" />
       <workItem from="1600244951540" duration="47351000" />
       <workItem from="1602494199418" duration="3052000" />
-      <workItem from="1602498245551" duration="61201000" />
+      <workItem from="1602498245551" duration="74687000" />
+      <workItem from="1602761702451" duration="1241000" />
+      <workItem from="1602777228941" duration="25308000" />
     </task>
     <task id="LOCAL-00001" summary="Install Symfo 4+ React (Last)">
       <created>1600180506881</created>
@@ -298,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602624331334</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Create Events (lifeCycle) + DoctrineRequest">
+      <created>1602688333673</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1602688333673</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +353,8 @@
     <MESSAGE value="Create DataBase + Entities + Faker" />
     <MESSAGE value="Create EO Entities + API Basics" />
     <MESSAGE value="Create Asserts + Events [PasswordEncoder] + Auth JWT" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Asserts + Events [PasswordEncoder] + Auth JWT" />
+    <MESSAGE value="Create Events (lifeCycle) + DoctrineRequest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Events (lifeCycle) + DoctrineRequest" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1416" y="-329" key="#Inspections" timestamp="1602598687738">
@@ -374,10 +401,10 @@
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602680609137" />
-    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2" timestamp="1602624336126">
+    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2" timestamp="1602688336885">
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
-    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602624336126" />
+    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602688336885" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.967/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600275782595" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.973/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600180509027" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.975/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600361413860" />

@@ -1830,7 +1830,7 @@ pre code {
 }
 
 .table-hover tbody tr:hover {
-    background-color: rgba(0, 0, 0, .075)
+    background-color: rgb(255 255 255 / 8%);
 }
 
 .table-primary, .table-primary > td, .table-primary > th {
@@ -4388,7 +4388,7 @@ tbody.collapse.show {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: #c5c5c5;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .25rem
@@ -6130,7 +6130,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 }
 
 .border-primary {
-    border-color: #007bff !important
+    border-color: #617d9c !important;
 }
 
 .border-secondary {

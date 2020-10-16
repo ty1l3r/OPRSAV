@@ -1,0 +1,59 @@
+.center{
+    text-align: center;
+}
+.divider{
+    width: 80%;
+    margin: 20px auto;
+}
+.loginInputs{
+    width: 400px;
+}
+.loginButton{
+    color: #0B7FC7;
+    width: 200px;
+}
+.MuiButtonGroup-root{
+    display: inline-block;
+}
+.MuiButtonGroup-grouped{
+   /* margin-left: auto;*/
+}
+.MuiButton-root {
+    color: #90CAF9;
+}
+.MuiOutlinedInput-notchedOutline {
+    border-color: #607D8B;
+}
+.MuiFormLabel-root {
+    color: #90caf9;
+}
+.formLogIn{
+    margin-left: fill;
+}
+.colorWhite{
+    color: #0F83E8;
+}
+@media (min-width: 100px) and (max-width: 279px) {
+    .loginInputs{
+        width: 100px;
+    }
+}
+@media (min-width: 200px) and (max-width: 375px) {
+    .loginInputs{
+        width: 210px;
+    }
+}
+@media (min-width: 100px) and (max-width: 991px) {
+    .loginButton{
+        justify-content: space-evenly;
+    }
+    .logQueryMt{
+        margin-top: 30px;
+    }
+    .MuiButtonGroup-grouped{
+    }
+    .MuiButtonGroup-root{
+        display: contents;
+    }
+}
+
