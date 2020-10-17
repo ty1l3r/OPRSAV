@@ -3,7 +3,6 @@
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
-use ApiPlatform\Core\Annotation\ApiSubresource;
 use App\Repository\QuotationsRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
@@ -56,6 +55,12 @@ class Quotations
      * @ORM\ManyToOne(targetEntity=Users::class, inversedBy="quotations")
      */
     private $author;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Customers::class, inversedBy="quotations")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $client;
 
     public function getId(): ?int
     {
@@ -119,6 +124,18 @@ class Quotations
     public function setAuthor(?Users $author): self
     {
         $this->author = $author;
+
+        return $this;
+    }
+
+    public function getClient(): ?Customers
+    {
+        return $this->client;
+    }
+
+    public function setClient(?Customers $client): self
+    {
+        $this->client = $client;
 
         return $this;
     }

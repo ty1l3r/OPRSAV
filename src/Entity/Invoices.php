@@ -56,6 +56,12 @@ class Invoices
      */
     private $seller;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Customers::class, inversedBy="invoices")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $client;
+
 
     public function getId(): ?int
     {
@@ -118,6 +124,18 @@ class Invoices
     public function setSeller(?Users $seller): self
     {
         $this->seller = $seller;
+
+        return $this;
+    }
+
+    public function getClient(): ?Customers
+    {
+        return $this->client;
+    }
+
+    public function setClient(?Customers $client): self
+    {
+        $this->client = $client;
 
         return $this;
     }

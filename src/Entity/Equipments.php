@@ -77,7 +77,6 @@ class Equipments
     }
 
 
-
     public function getId(): ?int
     {
         return $this->id;
@@ -198,10 +197,6 @@ class Equipments
 
         return $this;
     }
-
-
-
-
 
 
 }

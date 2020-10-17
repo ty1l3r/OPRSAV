@@ -46,8 +46,9 @@ security:
     access_control:
         - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/api/equipments, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api/customers, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/api/invoices, roles: [ 'ROLE_ADMIN','ROLE_VENDEUR' ] }
-        - { path: ^/api/quotations, roles: [ 'ROLE_ADMIN','ROLE_VENDEUR' ] }
+        - { path: ^/api/quotations, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/api/users, roles: [ 'ROLE_ADMIN' ] }
         - { path: ^/api/maintenances, roles: [ 'ROLE_ADMIN', 'ROLE_TECH' ] }
         - { path: ^/api/pose, roles: [ 'ROLE_ADMIN', 'ROLE_TECH' ] }

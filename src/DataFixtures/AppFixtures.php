@@ -3,6 +3,7 @@
 namespace App\DataFixtures;
 
 
+use App\Entity\Customers;
 use App\Entity\Equipments;
 use App\Entity\Invoices;
 use App\Entity\Maintenances;
@@ -37,7 +38,15 @@ class AppFixtures extends Fixture
     {
         $faker = Factory::create('fr_FR');
 
-        /* USERS & Quotations  */
+        /* Création des clients  */
+        for ($c = 0; $c < 30; $c++) {
+            $customer = new Customers();
+            $customer->setName($faker->company)
+                ->setEmail($faker->companyEmail)
+                ->setAddress($faker->address)
+                ->setCa($faker->randomFloat(2, 250, 35000));
+            $manager->persist($customer);
+        }
 
         /*Création de l'administrateur*/
         $user = new Users();
@@ -70,7 +79,8 @@ class AppFixtures extends Fixture
             $replace = array('A', 'A', 'A', 'A', 'A', 'A', 'C', 'E', 'E', 'E', 'E', 'I', 'I', 'I', 'I', 'O', 'O', 'O',
                 'O', 'O', 'U', 'U', 'U', 'U', 'Y', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 'e', 'e', 'e', 'e', 'i', 'i', 'i',
                 'i', 'o', 'o', 'o', 'o', 'o', 'o', 'u', 'u', 'u', 'u', 'y', 'y');
-            $lowerInitial = str_replace($search, $replace, $lowerInitial);
+            $lowerInitialSa = str_replace($search, $replace, $lowerInitial);
+
 
             /* Sélectionne le rôle adéquate. */
             if ($sector === 'technicien') {
@@ -82,7 +92,7 @@ class AppFixtures extends Fixture
             $user->setFirstName($firstName)
                 ->setLastName($lastName)
                 ->setPassword($hash)
-                ->setEmail($lowerInitial . "." . $lowerLastName . '@savpro.com')
+                ->setEmail($lowerInitialSa . "." . $lowerLastName . '@savpro.com')
                 ->setRoles((array)$role)
                 ->setSector($sector);
             $manager->persist($user);
@@ -107,6 +117,7 @@ class AppFixtures extends Fixture
                         ->setSentAt($date)
                         ->setStatus($statu)
                         ->setAuthor($user)
+                        ->setClient($customer)
                         ->setChrono($chrono);
                     $chrono++;
                     $manager->persist($quotations);
@@ -120,6 +131,7 @@ class AppFixtures extends Fixture
                             ]))
                             ->setSentAt($date)
                             ->setSeller($user)
+                            ->setClient($customer)
                             ->setChrono($chronoInvoices);
                         $chronoInvoices++;
                         $manager->persist($invoice);

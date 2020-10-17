@@ -23,8 +23,9 @@ import Divider from "@material-ui/core/Divider";
 import Avatar from "@material-ui/core/Avatar";
 import HomeIcon from '@material-ui/icons/Home';
 import {Link} from "react-router-dom";
-import {HomeRoute, Propos} from "../../Routing";
-import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
+import {Clients, HomeRoute} from "../../Routing";
+
+
 
 const useStyles = makeStyles(style => ({
     menuIcon: {marginRight: style.spacing(0)},
@@ -76,7 +77,7 @@ const NavBar = () => {
                         <Divider/>
 
                         {/*--------------------------------------------------------------------------------*/}
-                        <ListItem component={Link} to={Propos} onClick={toogleDrawer}>
+                        <ListItem  onClick={toogleDrawer}>
                             <ListItemIcon>
                                 <Avatar>
                                     <AccountBoxIcon className={classes.color}/>
@@ -106,13 +107,25 @@ const NavBar = () => {
                         </ListItem>
                         <Divider/>
                         {/*--------------------------------------------------------------------------------*/}
-                        <ListItem button to="/" onClick={toogleDrawer}>
+                        <ListItem button to="/"
+                                  onClick={toogleDrawer}>
                             <ListItemIcon>
                                 <Avatar>
                                     <ThumbUpAltIcon className={classes.color}/>
                                 </Avatar>
                             </ListItemIcon>
                             <ListItemText className={classes.align} primary="Liste des factures"/>
+                        </ListItem>
+                        <Divider/>
+                        {/*--------------------------------------------------------------------------------*/}
+                        <ListItem button component={Link} to={Clients}
+                                  onClick={toogleDrawer}>
+                            <ListItemIcon>
+                                <Avatar>
+                                    <ContactPhoneIcon className={classes.color}/>
+                                </Avatar>
+                            </ListItemIcon>
+                            <ListItemText className={classes.align} primary="Liste des clients"/>
                         </ListItem>
                         <Divider/>
                         {/*--------------------------------------------------------------------------------*/}
