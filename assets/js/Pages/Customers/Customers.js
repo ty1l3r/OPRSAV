@@ -24,10 +24,10 @@ function Customers(props) {
     useEffect(() => {
         fetchCustomers().then(r => []);
     }, []);
-    //Gestion du changement de page
-    const handlePageChange = page => {
-        setCurrentPage(page);
-    };
+
+    // Gestion du changement de page
+    const handlePageChange = page => {setCurrentPage(page);};
+
     //Fonction du Search
     const handleSearch = ({currentTarget}) => {
         const value = currentTarget.value;
@@ -41,12 +41,13 @@ function Customers(props) {
             c.email.toLowerCase().includes(search.toLowerCase()) ||
             c.address.toLowerCase().includes(search.toLowerCase())
     );
-    /*Appel de cu composant pagination*/
+    /* Pagination des données */
     const itemsPerPage = 5;
     const paginatedCustomers = Pagination.getData(filteredCustomers, currentPage, itemsPerPage)
 
     return (
         <Fragment>
+            <div className="container-fluid">
             <div className="card border-primary mb-3 cardAdjust">
                 <div className="card-header cardPersoTitle">Liste des devis</div>
                 <div className="form-group">
@@ -91,6 +92,7 @@ function Customers(props) {
                             length={filteredCustomers.length}
                             onPageChanged={handlePageChange}/>)
             }
+            </div>
         </Fragment>
     );
 }

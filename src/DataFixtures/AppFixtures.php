@@ -141,11 +141,13 @@ class AppFixtures extends Fixture
             /* Création des produits*/
             for ($eq = 0; $eq < mt_rand(1, 2); $eq++) {
                 $produits = new Equipments();
-                $image = 'https://lorempixel.com/640/480/business';
-                $produits->setName($faker->buildingNumber)
-                    ->setPicture($image)
+                $images = 'https://picsum.photos/320/200?random=';
+                $imageId = $faker->numberBetween(1,99) .'.jpg';
+                $imageFaker =($images.$imageId);
+                $produits->setName($faker->word)
+                    ->setPicture($imageFaker)
                     ->setPrice($faker->numberBetween($min = 300, $max = 9000))
-                    ->setRef($faker->asciify('REF ***'))
+                    ->setRef($faker->ean8)
                     ->setStock($faker->numberBetween($min = 0, $max = 1000));
 
                 $manager->persist($produits);

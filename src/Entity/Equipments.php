@@ -14,7 +14,6 @@ use Symfony\Component\Serializer\Annotation\Groups;
  * @ApiResource(
  *     normalizationContext={"groups"={"equipments_read"}},
  *     attributes={
- *     "pagination_items_per_page"=5,
  *     "order": {"name":"ASC"}
  *     }
  *     )
@@ -57,6 +56,7 @@ class Equipments
     /**
      * @ORM\Column(type="integer")
      * @Groups({"equipments_read"})
+     *
      */
     private $stock;
 

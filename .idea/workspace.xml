@@ -15,31 +15,18 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7165cd0-f933-48d6-97a5-2c483a9e7f52" name="Default Changelist" comment="Front : Create menus">
-      <change afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Pages/Customers/Customers.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Pages/Customers/Customers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Pages/Customers/CustomersPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Pages/Equipments/Equipments.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Services/CustomersAPI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/components/Paginations/Pagination.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/components/Paginations/Paginations.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c7165cd0-f933-48d6-97a5-2c483a9e7f52" name="Default Changelist" comment="Read &amp; Search for Customers">
+      <change afterPath="$PROJECT_DIR$/assets/js/Services/EquipmentsAPI.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Pages/Sellers/ReadQuotations.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Pages/Sellers/ReadQuotations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Pages/Customers/Customers.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Pages/Customers/Customers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Pages/Customers/CustomersPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Pages/Equipments/Equipments.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Pages/Equipments/Equipments.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Pages/Equipments/Equipments.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/Routing.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Routing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/components/NavBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/NavBar/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/console" beforeDir="false" afterPath="$PROJECT_DIR$/bin/console" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/phpunit" beforeDir="false" afterPath="$PROJECT_DIR$/bin/phpunit" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Services/CustomersAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Services/CustomersAPI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/Paginations/Pagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/Paginations/Pagination.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doctrine/CurrentUserExtension.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Equipments.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Equipments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Invoices.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Invoices.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Quotations.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Quotations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Events/AddMaintenances.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Events/AddMaintenances.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Events/PasswordEncoderSubscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Events/PasswordEncoderSubscriber.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +228,7 @@
       <workItem from="1602761702451" duration="1241000" />
       <workItem from="1602777228941" duration="44093000" />
       <workItem from="1602868641407" duration="913000" />
-      <workItem from="1602871066486" duration="5719000" />
+      <workItem from="1602871066486" duration="15992000" />
     </task>
     <task id="LOCAL-00001" summary="Install Symfo 4+ React (Last)">
       <created>1600180506881</created>
@@ -348,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602846056170</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Read &amp; Search for Customers">
+      <created>1602952786898</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1602952786898</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,7 +373,8 @@
     <MESSAGE value="Create Asserts + Events [PasswordEncoder] + Auth JWT" />
     <MESSAGE value="Create Events (lifeCycle) + DoctrineRequest" />
     <MESSAGE value="Front : Create menus" />
-    <option name="LAST_COMMIT_MESSAGE" value="Front : Create menus" />
+    <MESSAGE value="Read &amp; Search for Customers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Read &amp; Search for Customers" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1416" y="-329" key="#Inspections" timestamp="1602598687738">
@@ -434,10 +429,10 @@
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602680609137" />
-    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2" timestamp="1602846059552">
+    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2" timestamp="1602952789027">
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
-    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602846059552" />
+    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602952789027" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.967/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600275782595" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.973/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600180509027" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.975/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600361413860" />

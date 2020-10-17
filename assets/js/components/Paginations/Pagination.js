@@ -1,7 +1,7 @@
 import React from 'react';
 import './Paginations.css'
 
-const Pagination = ({currentPage, itemsPerPage, length, onPageChanged }) => {
+const Pagination = ({currentPage, itemsPerPage, length, onPageChanged}) => {
 
     const pagesCount = Math.ceil(length / itemsPerPage);
     const pages = [];
@@ -15,7 +15,10 @@ const Pagination = ({currentPage, itemsPerPage, length, onPageChanged }) => {
                 <ul className="pagination pagination-sm ulPagination">
 
                     <li className={"page-item" + (currentPage === 1 && " disabled")}>
-                        <button className="page-link" onClick={() => onPageChanged(currentPage - 1)}>&laquo;</button>
+                        <button className="page-link"
+                                onClick={() => onPageChanged(currentPage - 1)}
+                        >&laquo;
+                        </button>
                     </li>
 
                     {pages.map(page =>
@@ -27,10 +30,12 @@ const Pagination = ({currentPage, itemsPerPage, length, onPageChanged }) => {
                             </button>
                         </li>
                     )}
-
                     <li className={"page-item" + (currentPage === pagesCount && " disabled")}>
-                        <button className="page-link" onClick={() => onPageChanged(currentPage + 1)}>&raquo;</button>
+                        <button className="page-link"
+                                onClick={() => onPageChanged(currentPage + 1)}
+                        >&raquo;</button>
                     </li>
+
 
                 </ul>
             </div>
@@ -38,7 +43,7 @@ const Pagination = ({currentPage, itemsPerPage, length, onPageChanged }) => {
     );
 };
 
-Pagination.getData =(items, currentPage, itemsPerPage) => {
+Pagination.getData = (items, currentPage, itemsPerPage) => {
     const start = currentPage * itemsPerPage - itemsPerPage;
     return items.slice(start, start + itemsPerPage);
 }

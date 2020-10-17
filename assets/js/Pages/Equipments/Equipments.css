@@ -1,0 +1,16 @@
+.imgZoom{
+    width: 320px !important;
+}
+.imgNonZoom{
+    width: 150px;
+}
+.picture{
+    width: 50px;
+}
+.zoomImg{
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    z-index: 5;
+    color: #eaeaea;
+}

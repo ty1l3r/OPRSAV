@@ -4,7 +4,6 @@ import Accueil from "./Pages/Accueil/Accueil";
 import NavBar from "./components/NavBar/NavBar";
 import HomeSellers from "./Pages/Sellers/HomeSellers";
 import Customers from "./Pages/Customers/Customers";
-import CustomersPage from "./Pages/Customers/CustomersPage";
 import Equipments from "./Pages/Equipments/Equipments";
 
 export const HomeRoute = "/";
