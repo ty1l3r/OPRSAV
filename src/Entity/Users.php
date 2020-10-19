@@ -46,6 +46,7 @@ class Users implements UserInterface
     /**
      * @ORM\Column(type="json")
      * @Assert\NotBlank(message="L'ajout d'un rôle est obligatoire")
+     * @ApiSubresource
      */
     private $roles = [];
 

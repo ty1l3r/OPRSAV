@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import './Navbar.css';
 import {
     AppBar,
@@ -7,24 +7,20 @@ import {
     Drawer,
     IconButton,
     List,
-    ListItem,
     ListItemIcon,
     ListItemText,
     makeStyles,
     Toolbar,
 } from '@material-ui/core';
 import {Menu as MenuIcon} from '@material-ui/icons';
-import AccountBoxIcon from '@material-ui/icons/SentimentVerySatisfied';
-import BuildIcon from '@material-ui/icons/Build';
-import ImportantDevicesIcon from '@material-ui/icons/ImportantDevices';
-import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
+import AuthAPI from '../../Services/authAPI'
 import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 import Divider from "@material-ui/core/Divider";
 import Avatar from "@material-ui/core/Avatar";
 import HomeIcon from '@material-ui/icons/Home';
 import {Link} from "react-router-dom";
-import {Clients, HomeRoute} from "../../Routing";
-
+import ListItem from "@material-ui/core/ListItem";
+import AuthContext from "../../contexts/AuthContext";
 
 
 const useStyles = makeStyles(style => ({
@@ -34,11 +30,13 @@ const useStyles = makeStyles(style => ({
     align: {marginLeft: "12px"},
     top: {marginTop: '27.3%'},
     color: {color: "white"},
-
-
 }))
 
-const NavBar = () => {
+const NavBar = ({ history }) => {
+
+    //utilisation du context
+    const { isAuthenticated, setIsAuthenticated } = useContext(AuthContext);
+
     //styles
     const classes = useStyles();
     //state
@@ -48,10 +46,16 @@ const NavBar = () => {
         setDrawerOpen(!drawerOpen)
     };
 
+    //Fonction de déconnexion
+    const handleLogout = () => {
+            AuthAPI.logout();
+            setIsAuthenticated(false);
+            history.push("/")
+    };
+
     return (
         <AppBar position="fixed" className='adjust'>
             <Toolbar>
-
                 <IconButton onClick={toogleDrawer} className={classes.menuIcon}
                             edge="start">
                     <MenuIcon/>
@@ -59,77 +63,43 @@ const NavBar = () => {
                 <Link to="/" underline="none" color="inherit" variant="h6">
                 </Link>
                 <Box flexGrow={1}/>
-                <Button size="large">Login</Button>
+
+                {isAuthenticated &&
+                <>
+                    <Button onClick={handleLogout} size="large">
+                            LogOut
+                    </Button>
+                </>
+                ||
+                <></>
+                }
+
                 <Drawer anchor="left" variant="temporary" onClose={toogleDrawer} open={drawerOpen}>
                     <List className={classes.list} component="nav" aria-label="main mailbox folders">
                         {/*--------------------------------------------------------------------------------*/}
                         <Divider className={classes.top}/>
 
-                        <ListItem button component={Link} to={HomeRoute}
-                                  onClick={toogleDrawer}>
+                        <ListItem onClick={toogleDrawer}>
                             <ListItemIcon>
                                 <Avatar>
                                     <HomeIcon className={classes.color}/>
                                 </Avatar>
                             </ListItemIcon>
-                            <ListItemText className={classes.align} primary="Accueil"/>
+                            <ListItemText className={classes.align} primary="LoginPage"/>
                         </ListItem>
                         <Divider/>
-
+                        {/*--------------------------------------------------------------------------------*/}
+                        <ListItem onClick={toogleDrawer}>
+                            <ListItemIcon>
+                                <Avatar>
+                                    <HomeIcon className={classes.color}/>
+                                </Avatar>
+                            </ListItemIcon>
+                            <ListItemText className={classes.align} primary="SERVICES"/>
+                        </ListItem>
+                        <Divider/>
                         {/*--------------------------------------------------------------------------------*/}
                         <ListItem  onClick={toogleDrawer}>
-                            <ListItemIcon>
-                                <Avatar>
-                                    <AccountBoxIcon className={classes.color}/>
-                                </Avatar>
-                            </ListItemIcon>
-                            <ListItemText className={classes.align} primary="Créer un devis"/>
-                        </ListItem>
-                        <Divider/>
-                        {/*--------------------------------------------------------------------------------*/}
-                        <ListItem button to="/" onClick={toogleDrawer}>
-                            <ListItemIcon>
-                                <Avatar>
-                                    <BuildIcon className={classes.color}/>
-                                </Avatar>
-                            </ListItemIcon>
-                            <ListItemText className={classes.align} primary="Créer une facture"/>
-                        </ListItem>
-                        <Divider/>
-                        {/*--------------------------------------------------------------------------------*/}
-                        <ListItem button to="/" onClick={toogleDrawer}>
-                            <ListItemIcon>
-                                <Avatar>
-                                    <ImportantDevicesIcon className={classes.color}/>
-                                </Avatar>
-                            </ListItemIcon>
-                            <ListItemText className={classes.align} primary="Liste des devis"/>
-                        </ListItem>
-                        <Divider/>
-                        {/*--------------------------------------------------------------------------------*/}
-                        <ListItem button to="/"
-                                  onClick={toogleDrawer}>
-                            <ListItemIcon>
-                                <Avatar>
-                                    <ThumbUpAltIcon className={classes.color}/>
-                                </Avatar>
-                            </ListItemIcon>
-                            <ListItemText className={classes.align} primary="Liste des factures"/>
-                        </ListItem>
-                        <Divider/>
-                        {/*--------------------------------------------------------------------------------*/}
-                        <ListItem button component={Link} to={Clients}
-                                  onClick={toogleDrawer}>
-                            <ListItemIcon>
-                                <Avatar>
-                                    <ContactPhoneIcon className={classes.color}/>
-                                </Avatar>
-                            </ListItemIcon>
-                            <ListItemText className={classes.align} primary="Liste des clients"/>
-                        </ListItem>
-                        <Divider/>
-                        {/*--------------------------------------------------------------------------------*/}
-                        <ListItem button to="/" onClick={toogleDrawer}>
                             <ListItemIcon>
                                 <Avatar>
                                     <ContactPhoneIcon className={classes.color}/>
@@ -137,6 +107,17 @@ const NavBar = () => {
                             </ListItemIcon>
                             <ListItemText className={classes.align} primary="A Propos"/>
                         </ListItem>
+                        <Divider/>
+                        {/*--------------------------------------------------------------------------------*/}
+                        <ListItem onClick={handleLogout}>
+                            <ListItemIcon>
+                                <Avatar>
+                                    <ContactPhoneIcon className={classes.color}/>
+                                </Avatar>
+                            </ListItemIcon>
+                            <ListItemText className={classes.align} primary="Déconnexion"/>
+                        </ListItem>
+
                     </List>
                 </Drawer>
             </Toolbar>

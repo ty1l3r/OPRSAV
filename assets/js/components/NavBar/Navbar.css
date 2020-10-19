@@ -7,3 +7,12 @@
 .makeStyles-list-3 {
     width: 251px;
 }
+.Connected{
+    color:lawngreen;
+}.disConnected {
+    color: red;
+ }
+ .loginUpp{
+     text-transform: uppercase;
+     color:lawngreen;
+ }

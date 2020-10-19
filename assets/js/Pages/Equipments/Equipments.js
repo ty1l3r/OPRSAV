@@ -2,13 +2,9 @@ import React, {Fragment, useEffect, useState} from 'react'
 import Pagination from "../../components/Paginations/Pagination"
 import EquipmentsAPI from "../../Services/EquipmentsAPI"
 import './Equipments.css'
-import ZoomInIcon from '@material-ui/icons/ZoomIn';
 
+function Equipments() {
 
-
-function Equipments(props) {
-
-    const [loading, setLoading] = useState (false);
     /* STATE pour modifier la variable et afficher le composant */
     const [equipments, setEquipments] = useState([]);
     /* STATE pagination */
@@ -16,15 +12,14 @@ function Equipments(props) {
     /* STATE Search Box */
     const [search, setSearch] = useState("");
     /*STATE image*/
-    const [zoom, setZoom] = useState (false);
-
-    const setZoomOn = () =>{
+    const [zoom, setZoom] = useState(false);
+    //SetSTATE du Zoom
+    const setZoomOn = () => {
         setZoom(true)
     }
-    const setZoomOff = () =>{
+    const setZoomOff = () => {
         setZoom(false)
     }
-
 
     // Permet d'aller récupérer les customers
     const fetchEquipments = async () => {
@@ -40,7 +35,9 @@ function Equipments(props) {
         fetchEquipments().then(r => []);
     }, []);
     // Gestion du changement de page
-    const handlePageChange = page => {setCurrentPage(page);};
+    const handlePageChange = page => {
+        setCurrentPage(page);
+    };
 
     //Fonction du Search
     const handleSearch = ({currentTarget}) => {
@@ -57,13 +54,12 @@ function Equipments(props) {
             e.price.toString().includes(search.toLowerCase())
     );
     /* Pagination des données */
-    const itemsPerPage = 10;
+    const itemsPerPage = 5;
     const paginateEquipments = Pagination.getData(filteredEquipments, currentPage, itemsPerPage)
-
 
     return (
         <Fragment>
-            <div className="container-fluid">
+            <div className="container">
                 <div className="card border-primary mb-3 cardAdjust">
                     <div className="card-header cardPersoTitle">Liste de nos produits</div>
                     <div className="form-group">
@@ -122,11 +118,6 @@ function Equipments(props) {
                 }
             </div>
         </Fragment>
-
-
-
-                            );
-
+    );
 }
-
 export default Equipments;

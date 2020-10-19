@@ -45,13 +45,13 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/api/equipments, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/api/customers, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api/equipments, roles: [ 'ROLE_ADMIN','ROLE_VENDEUR', 'ROLE_TECH' ] }
+        - { path: ^/api/customers, roles: [ 'ROLE_ADMIN','ROLE_VENDEUR' ] }
         - { path: ^/api/invoices, roles: [ 'ROLE_ADMIN','ROLE_VENDEUR' ] }
-        - { path: ^/api/quotations, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api/quotations, roles: [ 'ROLE_ADMIN','ROLE_VENDEUR' ] }
         - { path: ^/api/users, roles: [ 'ROLE_ADMIN' ] }
         - { path: ^/api/maintenances, roles: [ 'ROLE_ADMIN', 'ROLE_TECH' ] }
-        - { path: ^/api/pose, roles: [ 'ROLE_ADMIN', 'ROLE_TECH' ] }
+        - { path: ^/api/pose, roles: [ 'ROLE_ADMIN','ROLE_TECH' ] }
 
         # - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }

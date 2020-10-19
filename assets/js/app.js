@@ -13,11 +13,11 @@ const useStyles = makeStyles(theme => ({
     divider: theme.mixins.toolbar,
 }))
 
-export const HomeRoute = "/";
-export const Propos = '/a-propos'
+
 export default function App() {
 
     const classes = useStyles();
+
     return (
         <div>
             <div className={classes.divider}/>
