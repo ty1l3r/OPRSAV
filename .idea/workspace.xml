@@ -15,31 +15,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7165cd0-f933-48d6-97a5-2c483a9e7f52" name="Default Changelist" comment="EO Login + Auth + Context + PrivateRoutes">
-      <change afterPath="$PROJECT_DIR$/assets/js/Pages/Sellers/Quotations/QuotationsPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Services/QuotationsAPI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/components/MenusSellers/MenuSellers.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/components/MenusSellers/MenuSellers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Events/AddQuotations.php" afterDir="false" />
+    <list default="true" id="c7165cd0-f933-48d6-97a5-2c483a9e7f52" name="Default Changelist" comment="Before Debugging API groups on Quotations submit">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Pages/Equipments/Equipments.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Pages/Equipments/Equipments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Pages/Sellers/CreateQuotations.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Pages/Sellers/Quotation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Pages/Sellers/HomeSellers.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Pages/Sellers/HomeSellers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Pages/Sellers/ReadQuotations.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Pages/Sellers/ReadQuotations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Pages/Sellers/Sellers.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Pages/Sellers/Sellers.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Routing.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Routing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Services/CustomersAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Services/CustomersAPI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Pages/Admin/HomeAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Pages/Admin/HomeAdmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Pages/Sellers/Quotation.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Pages/Sellers/Quotation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/TODO LIST" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/TODO LIST" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/components/Form/Field.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/Form/Field.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/api_platform.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/api_platform.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Customers.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Customers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Quotations.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Quotations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/QuotationsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/QuotationsRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Events/AddQuotations.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Events/AddQuotations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CustomersRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CustomersRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,6 +210,16 @@
       <recent name="$PROJECT_DIR$/assets/js/components/Styles/Carousel/images" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Customers.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/Entity/Customers.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.Customers.php" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -248,7 +242,8 @@
       <workItem from="1603121324913" duration="41000" />
       <workItem from="1603132225434" duration="23112000" />
       <workItem from="1603185582043" duration="4540000" />
-      <workItem from="1603192194903" duration="56335000" />
+      <workItem from="1603192194903" duration="57249000" />
+      <workItem from="1603293616505" duration="5770000" />
     </task>
     <task id="LOCAL-00001" summary="Install Symfo 4+ React (Last)">
       <created>1600180506881</created>
@@ -376,7 +371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603146477754</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Before Debugging API groups on Quotations submit">
+      <created>1603292954419</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1603292954419</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,13 +412,15 @@
     <MESSAGE value="Read &amp; Search for Customers" />
     <MESSAGE value="Add Equipments page + Customers Page" />
     <MESSAGE value="EO Login + Auth + Context + PrivateRoutes" />
-    <option name="LAST_COMMIT_MESSAGE" value="EO Login + Auth + Context + PrivateRoutes" />
+    <MESSAGE value="Before Debugging API groups on Quotations submit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Before Debugging API groups on Quotations submit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1416" y="-329" key="#Inspections" timestamp="1602598687738">
-      <screen x="-3440" y="-687" width="3440" height="1350" />
+    <state x="-1416" y="-311" key="#Inspections" timestamp="1603293575639">
+      <screen x="-3440" y="-687" width="3440" height="1417" />
     </state>
     <state x="-1416" y="-329" key="#Inspections/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602598687738" />
+    <state x="-1416" y="-311" key="#Inspections/0.23.1680.962/0.-1057.1920.1057/-3440.-687.3440.1417@-3440.-687.3440.1417" timestamp="1603293575639" />
     <state x="-1667" y="-203" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603146219939">
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
@@ -477,10 +481,11 @@
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602680609137" />
-    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2" timestamp="1603146479587">
-      <screen x="-3440" y="-687" width="3440" height="1350" />
+    <state x="-2911" y="-240" key="Vcs.Push.Dialog.v2" timestamp="1603292956595">
+      <screen x="-3440" y="-687" width="3440" height="1417" />
     </state>
     <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1603146479587" />
+    <state x="-2911" y="-240" key="Vcs.Push.Dialog.v2/0.23.1680.962/0.-1057.1920.1057/-3440.-687.3440.1417@-3440.-687.3440.1417" timestamp="1603292956595" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.967/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600275782595" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.973/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600180509027" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.975/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600361413860" />

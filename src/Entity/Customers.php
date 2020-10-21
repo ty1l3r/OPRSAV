@@ -5,11 +5,12 @@ namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use App\Repository\CustomersRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * @ORM\Entity(repositoryClass=CustomersRepository::class)
+ * @ORM\Entity(repositoryClass=CustomersRepository::Class),
  * @ApiResource(
  *     normalizationContext={"groups"={"customers_read"}},
  *    attributes={
@@ -54,6 +55,7 @@ class Customers
 
     /**
      * @ORM\OneToMany(targetEntity=Quotations::class, mappedBy="client", orphanRemoval=true)
+     *
      */
     private $quotations;
 

@@ -12,9 +12,7 @@
 namespace App\Events;
 
 use ApiPlatform\Core\EventListener\EventPriorities;
-use App\Entity\Maintenances;
 use App\Entity\Quotations;
-use App\Entity\Users;
 use App\Repository\QuotationsRepository;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\ViewEvent;
@@ -28,10 +26,10 @@ class AddQuotations implements EventSubscriberInterface
     private $security;
     private $repository;
 
-    public function __construct(Security $security,QuotationsRepository $repository )
+    public function __construct(Security $security, QuotationsRepository $repository)
     {
         $this->security = $security;
-        $this->repository=$repository;
+        $this->repository = $repository;
     }
 
     public static function getSubscribedEvents()
@@ -45,8 +43,7 @@ class AddQuotations implements EventSubscriberInterface
     {
 
 
-
-       $addRequire = $event->getControllerResult();
+        $addRequire = $event->getControllerResult();
         $method = $event->getRequest()->getMethod();
 
 
@@ -59,5 +56,6 @@ class AddQuotations implements EventSubscriberInterface
             $nextChrono = $this->repository->findNextChrono($this->security->getUser());
             $addRequire->setChrono($nextChrono);
 
+        }
     }
-}}
+}
