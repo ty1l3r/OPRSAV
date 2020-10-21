@@ -3,8 +3,10 @@
 namespace App\Repository;
 
 use App\Entity\Quotations;
+use App\Entity\Users;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use http\Client\Curl\User;
 
 /**
  * @method Quotations|null find($id, $lockMode = null, $lockVersion = null)
@@ -18,6 +20,20 @@ class QuotationsRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Quotations::class);
     }
+
+    public function findNextChrono(Users $user){
+        return $this->createQueryBuilder("i")
+            ->select("i.chrono")
+            ->join("i.author","c")
+            ->where("c.id = :user")
+            ->setParameter("user", $user)
+            ->orderBy("i.chrono", "DESC")
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getSingleScalarResult() + 1;
+    }
+
+
 
     // /**
     //  * @return Quotations[] Returns an array of Quotations objects

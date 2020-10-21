@@ -23,10 +23,12 @@
         "bootstrap": "^4.5.2",
         "jquery": "^3.5.1",
         "jwt-decode": "^3.0.0",
+        "moment": "^2.29.1",
         "prop-types": "^15.7.2",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-router-dom": "^5.2.0",
-        "react-toastify": "^6.0.9"
+        "react-toastify": "^6.0.9",
+        "uuid": "^8.3.1"
     }
 }

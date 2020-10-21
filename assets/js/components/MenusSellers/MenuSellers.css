@@ -1,0 +1,19 @@
+.menuColor{
+    color: #0F83E8;
+}
+.MuiFormLabel-root.Mui-focused {
+    color: #90caf9;
+}
+.MuiRadio-colorPrimary.Mui-checked {
+    color: red;
+}
+.fullDiv{
+    width: 100%;
+}
+.cardTitle{
+    background-color: #415e7b;
+    margin-bottom: -0.75rem;
+}
+.selectWidth{
+    width: 20%;
+}

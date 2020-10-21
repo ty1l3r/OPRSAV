@@ -13,7 +13,8 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *     normalizationContext={"groups"={"quotations_read"}},
  *     attributes={
  *     "pagination_items_per_page"=20,
- *     "order": {"sentAt":"DESC"}
+ *     "order": {"sentAt":"DESC"},
+ *     "pagination_enabled":false
  *     }
  *     )
  */
@@ -59,6 +60,7 @@ class Quotations
     /**
      * @ORM\ManyToOne(targetEntity=Customers::class, inversedBy="quotations")
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"quotations_read","customers_read" })
      */
     private $client;
 

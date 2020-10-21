@@ -9,6 +9,8 @@ import HomeSellers from "./Pages/Sellers/HomeSellers";
 import AuthContext from "./contexts/AuthContext";
 import HomeAdmin from "./Pages/Admin/HomeAdmin";
 import HomeTeck from "./Pages/Tech/HomeTeck";
+import Quotation from "./Pages/Sellers/Quotation";
+import QuotationsPage from "./Pages/Sellers/Quotations/QuotationsPage";
 
 
 AuthAPI.setup();
@@ -34,20 +36,11 @@ const Routing = () => {
                 <NavbarWithRouter/>
                 <main>
                     <Switch>
-                        <PrivateRoute path="/produits"
-                                      isAuthenticated={isAuthenticated}
-                                      component={Equipments}
-                        />
-
-                        <PrivateRoute path="/clients"
-                                      isAuthenticated={isAuthenticated}
-                                      component={Customers}
-                        />
-
-                        <PrivateRoute path="/vendeurs"
-                                      isAuthenticated={isAuthenticated}
-                                      component={HomeSellers}
-                        />
+                        <PrivateRoute path="/devis/:id" isAuthenticated={isAuthenticated} component={Quotation}/>
+                        <PrivateRoute path="/devis" isAuthenticated={isAuthenticated} component={QuotationsPage}/>
+                        <PrivateRoute path="/produits" isAuthenticated={isAuthenticated} component={Equipments}/>
+                        <PrivateRoute path="/clients" isAuthenticated={isAuthenticated} component={Customers}/>
+                        {/*<PrivateRoute path="/vendeurs" isAuthenticated={isAuthenticated} component={HomeSellers}/>*/}
                         <Route path="/techniciens" component={HomeTeck}/>
                         <Route path="/admin" component={HomeAdmin}/>
                         <Route path="/" component={LoginPage}/>

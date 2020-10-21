@@ -10,4 +10,6 @@ api_platform:
             enabled: true
             items_per_page: 20
             items_per_page_parameter_name: "count"
+    eager_loading:
+        max_joins: 500
 

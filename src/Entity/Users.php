@@ -16,7 +16,6 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Entity(repositoryClass=UsersRepository::class)
  * @ApiResource(
  *     denormalizationContext={"disable_type_enforcement"=true},
- *     normalizationContext={"groups"={"users_read"}},
  *     attributes={"order": {"lastName":"ASC"}},
  *      subresourceOperations={
  *          "invoices_get_subresource"= { "path"="/collaborateur/{id}/factures"},

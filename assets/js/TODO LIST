@@ -2,3 +2,5 @@ TO DO
 
 - Réparer l'affichage de l'erreur à la connexion.
 - Cheker la non factorisation possible du "isAuthenticated dans les pages privées"
+- Page ReadQuotations revoir le responsiv du tableau
+- configurer la liste des clients dans la création de devis

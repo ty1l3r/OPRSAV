@@ -3,6 +3,7 @@ import Pagination from "../../components/Paginations/Pagination"
 import EquipmentsAPI from "../../Services/EquipmentsAPI"
 import './Equipments.css'
 
+
 function Equipments() {
 
     /* STATE pour modifier la variable et afficher le composant */

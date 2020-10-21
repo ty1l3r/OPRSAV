@@ -1,9 +1,11 @@
 ul {
     list-style-type: none;
 }
+
 .colorDep {
     color: #ff7644;
 }
+
 .colorGreen {
     color: #1fda27;
 }
@@ -11,57 +13,71 @@ ul {
 .adjustTitle1 {
     margin-top: -25px;
 }
+
 .iconeCv {
     font-size: 55px;
 }
-.myLink{
+
+.myLink {
     color: #62d4e4;
 }
+
 .iconeMr {
     margin-right: 5px;
 }
+
 .iconeWeb {
     font-size: 10px;
 }
+
 .titleCv {
     font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
 }
+
 .fontTitle {
     font-size: 30px !important;
     font-weight: bold;
     text-transform: capitalize;
 }
+
 .fontDate {
     font-size: 20px !important;
     font-weight: bold;
     padding-top: 12px;
 }
-.subtitleCv{
+
+.subtitleCv {
     margin-top: -26px;
     font-size: 20px;
     color: #62d4e4;
 }
+
 .buttonWidth {
     width: 93% !important;
     height: 40px;
 }
+
 .buttonWidthCv {
     width: 170px !important;
     height: 50px;
 }
+
 .buttonOnCv {
     background-color: #1d7d20;
     color: white;
     /*width: 120px !important;*/
 }
-.timeLineFonts{
+
+.timeLineFonts {
     font-size: 13px;
 }
-.adjustBar{
+
+.adjustBar {
     width: 70%;
 }
+
 .MuiButton-label {
     width: 100%;
     display: inherit;
@@ -69,23 +85,39 @@ ul {
     justify-content: inherit;
     font-size: 12px;
 }
+
 .ali {
-  margin-top: 20px;
+    margin-top: 20px;
 }
-.cardPersoTitle{
+
+.cardPersoTitle {
     background-color: #2b3a46;
     font-size: 20px;
     text-transform: uppercase;
 
 }
-.cardPersoContent{
+.card-header{
+    background-color: #415e7b;
+}
+
+.cardPersoContent {
     background-color: #36404a;
 }
-.cardAdjust{
-    margin-top: 20px;
+
+.cardAdjust {
+    /*width: fit-content;*/
 }
-.tableBackground{
+
+.tableBackground {
     background-color: #36404a;
+}
+
+.radioB {
+    margin-top: 5px;
+}
+
+.MuiTypography-body1 {
+    font-size: 13px;
 }
 
 @media (min-width: 100px) and (max-width: 991px) {
@@ -94,39 +126,48 @@ ul {
         margin-left: auto;
         margin-right: auto;
     }
+
     .aProp {
         text-align: center;
 
     }
+
     .aul {
         display: inline-flex;
         flex-flow: wrap;
         justify-content: center;
         padding: unset;
     }
+
     .aulPlace {
         display: inline;
     }
+
     .ali {
         margin-right: 2%;
         margin-top: 0px;
     }
+
     .buttonOnCv {
         margin-top: 10px;
         margin-right: 5px;
 
     }
+
     .buttonWidthCv {
         margin-top: 5px;
         width: 90px !important;
         margin-right: 6%;
     }
+
     .placeXl {
         display: none;
     }
+
     .placeMd {
         margin-top: -36px;
     }
+
     .MuiButton-label {
         width: 100%;
         display: inherit;
@@ -134,55 +175,66 @@ ul {
         justify-content: inherit;
         font-size: 12px;
     }
-    .titres{
+
+    .titres {
         font-size: 25px;
     }
 
 }
+
 @media (min-width: 991px) {
     .placeMd {
         display: none;
     }
-    .colAdjust{
-             visibility: visible ;
-         }
+
+    .colAdjust {
+        visibility: visible;
+    }
 }
+
 /* MEDIA QUERIES COL PADCONTENT */
 @media (min-width: 1900px) {
-    .padContent{
+    .padContent {
         padding-right: 10%;
     }
 }
+
 @media (min-width: 1600px) and (max-width: 1900px) {
-    .padContent{
+    .padContent {
         padding-right: 10%;
     }
 }
+
 @media (min-width: 1500px) and (max-width: 1600px) {
-    .padContent{
+    .padContent {
         padding-right: 10%;
     }
 }
+
 @media (min-width: 1400px) and (max-width: 1600px) {
-    .padContent{
+    .padContent {
         padding-right: 9%;
     }
 }
+
 @media (min-width: 1200px) and (max-width: 1400px) {
-    .padContent{
+    .padContent {
         padding-right: 6%;
     }
 }
+
 @media (min-width: 1048px) and (max-width: 1200px) {
-    .padContent{
+    .padContent {
         padding-right: 2%;
     }
 }
+
 @media (min-width: 991px) and (max-width: 1048px) {
-    .padContent{
+    .padContent {
         padding-right: 2%;
     }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
     .buttonWidthCv {
         margin-top: 5px;
@@ -197,11 +249,13 @@ ul {
     .MuiButton-label {
         font-size: 10px;
     }
+
     .buttonWidthCv {
         margin-top: 10px;
 
     }
 }
+
 @media (min-width: 100px) and (max-width: 500px) {
     .MuiButton-label {
         font-size: 10px;
@@ -209,8 +263,7 @@ ul {
 }
 
 
-
-.padContent{
+.padContent {
     padding-right: 5%;
     padding-left: 5%;
 }

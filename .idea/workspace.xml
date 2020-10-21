@@ -15,31 +15,31 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7165cd0-f933-48d6-97a5-2c483a9e7f52" name="Default Changelist" comment="Add Equipments page + Customers Page">
-      <change afterPath="$PROJECT_DIR$/assets/js/Pages/Accueil/LoginPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Pages/Admin/HomeAdmin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Pages/Tech/HomeTeck.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/Services/authAPI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/TODO LIST" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/components/Form/Field.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/contexts/AuthContext.js" afterDir="false" />
+    <list default="true" id="c7165cd0-f933-48d6-97a5-2c483a9e7f52" name="Default Changelist" comment="EO Login + Auth + Context + PrivateRoutes">
+      <change afterPath="$PROJECT_DIR$/assets/js/Pages/Sellers/Quotations/QuotationsPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Services/QuotationsAPI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/components/MenusSellers/MenuSellers.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/components/MenusSellers/MenuSellers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Events/AddQuotations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Pages/Accueil/Accueil.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Pages/Customers/Customers.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Pages/Customers/Customers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/Pages/Equipments/Equipments.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Pages/Equipments/Equipments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Pages/Login/LoginPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Pages/Sellers/CreateQuotations.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Pages/Sellers/Quotation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Pages/Sellers/HomeSellers.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Pages/Sellers/HomeSellers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/Pages/Sellers/ReadQuotations.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Pages/Sellers/ReadQuotations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Pages/Sellers/Sellers.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Pages/Sellers/Sellers.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/Routing.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Routing.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/Services/CustomersAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Services/CustomersAPI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Services/EquipmentsAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Services/EquipmentsAPI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/components/NavBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/NavBar/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/components/NavBar/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/NavBar/Navbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/TODO LIST" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/TODO LIST" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/Form/Field.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/Form/Field.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/api_platform.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/api_platform.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Customers.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Customers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Quotations.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Quotations.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/QuotationsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/QuotationsRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +53,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -206,23 +206,24 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/js/components/Paginations" />
-      <recent name="$PROJECT_DIR$/assets/js" />
-      <recent name="$PROJECT_DIR$/assets/js/components" />
-      <recent name="$PROJECT_DIR$/assets/js/components/Styles/Carousel/images" />
-      <recent name="$PROJECT_DIR$/assets/js/components/Styles/Carousel" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/js/components/Styles/Carousel/js" />
       <recent name="$PROJECT_DIR$/assets/js/components/Styles/Carousel/images" />
       <recent name="$PROJECT_DIR$/assets/js/components/Styles/Carousel/css/fonts" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/vendor" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/js/Pages/Sellers" />
+      <recent name="$PROJECT_DIR$/assets/js/components/Paginations" />
+      <recent name="$PROJECT_DIR$/assets/js" />
+      <recent name="$PROJECT_DIR$/assets/js/components" />
+      <recent name="$PROJECT_DIR$/assets/js/components/Styles/Carousel/images" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -245,7 +246,9 @@
       <workItem from="1603107968778" duration="4516000" />
       <workItem from="1603119432353" duration="257000" />
       <workItem from="1603121324913" duration="41000" />
-      <workItem from="1603132225434" duration="13617000" />
+      <workItem from="1603132225434" duration="23112000" />
+      <workItem from="1603185582043" duration="4540000" />
+      <workItem from="1603192194903" duration="56335000" />
     </task>
     <task id="LOCAL-00001" summary="Install Symfo 4+ React (Last)">
       <created>1600180506881</created>
@@ -366,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602968188695</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="EO Login + Auth + Context + PrivateRoutes">
+      <created>1603146477754</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1603146477754</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +409,8 @@
     <MESSAGE value="Front : Create menus" />
     <MESSAGE value="Read &amp; Search for Customers" />
     <MESSAGE value="Add Equipments page + Customers Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Equipments page + Customers Page" />
+    <MESSAGE value="EO Login + Auth + Context + PrivateRoutes" />
+    <option name="LAST_COMMIT_MESSAGE" value="EO Login + Auth + Context + PrivateRoutes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1416" y="-329" key="#Inspections" timestamp="1602598687738">
@@ -422,10 +433,18 @@
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
     <state x="-1655" y="-276" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602868296253" />
-    <state x="-1265" y="-252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602622112444">
+    <state x="-1265" y="-252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603184509173">
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
-    <state x="-1265" y="-252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602622112444" />
+    <state x="-1265" y="-252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1603184509173" />
+    <state x="-1416" y="-157" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1603198245948">
+      <screen x="-3440" y="-687" width="3440" height="1350" />
+    </state>
+    <state x="-1416" y="-157" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1603198245948" />
+    <state x="-3440" y="-687" key="FileDocumentManager.FileCacheConflict" timestamp="1603211751892">
+      <screen x="-3440" y="-687" width="3440" height="1350" />
+    </state>
+    <state x="-3440" y="-687" key="FileDocumentManager.FileCacheConflict/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1603211751892" />
     <state width="2085" height="388" key="GridCell.Tab.0.bottom" timestamp="1600338025523">
       <screen x="3600" y="-259" width="3440" height="1417" />
     </state>
@@ -446,10 +465,10 @@
     </state>
     <state width="2085" height="388" key="GridCell.Tab.0.right/0.23.1680.972/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600338025523" />
     <state width="1817" height="408" key="GridCell.Tab.0.right/0.23.1680.973/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600179632902" />
-    <state x="-1187" y="-84" key="NewPhpFileDialog" timestamp="1602679979409">
+    <state x="-1187" y="-84" key="NewPhpFileDialog" timestamp="1603222676849">
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
-    <state x="-1187" y="-84" key="NewPhpFileDialog/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602679979409" />
+    <state x="-1187" y="-84" key="NewPhpFileDialog/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1603222676849" />
     <state x="-2444" y="-337" width="1793" height="722" key="SettingsEditor" timestamp="1602869621224">
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
@@ -458,10 +477,10 @@
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602680609137" />
-    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2" timestamp="1602968190138">
+    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2" timestamp="1603146479587">
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
-    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602968190138" />
+    <state x="-2911" y="-261" key="Vcs.Push.Dialog.v2/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1603146479587" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.967/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600275782595" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.973/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600180509027" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.975/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600361413860" />
@@ -474,10 +493,11 @@
       <screen x="3600" y="-259" width="3440" height="1417" />
     </state>
     <state x="4364" y="52" width="598" height="735" key="find.popup/0.23.1680.967/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600329827011" />
-    <state x="-2712" y="-392" width="670" height="645" key="search.everywhere.popup" timestamp="1603140549177">
-      <screen x="-3440" y="-687" width="3440" height="1350" />
+    <state x="-2043" y="-400" width="670" height="678" key="search.everywhere.popup" timestamp="1603286003718">
+      <screen x="-3440" y="-687" width="3440" height="1417" />
     </state>
-    <state x="-2712" y="-392" width="670" height="645" key="search.everywhere.popup/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1603140549177" />
+    <state x="-2043" y="-414" width="670" height="645" key="search.everywhere.popup/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1603198208391" />
+    <state x="-2043" y="-400" width="670" height="678" key="search.everywhere.popup/0.23.1680.961/0.-1057.1920.1057/-3440.-687.3440.1417@-3440.-687.3440.1417" timestamp="1603286003718" />
     <state x="4328" y="51" width="670" height="676" key="search.everywhere.popup/0.23.1680.971/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600335037857" />
   </component>
 </project>

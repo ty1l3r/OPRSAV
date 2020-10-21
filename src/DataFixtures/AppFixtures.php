@@ -39,11 +39,12 @@ class AppFixtures extends Fixture
         $faker = Factory::create('fr_FR');
 
         /* Création des clients  */
-        for ($c = 0; $c < 30; $c++) {
+        for ($c = 0; $c < 20; $c++) {
             $customer = new Customers();
             $customer->setName($faker->company)
                 ->setEmail($faker->companyEmail)
                 ->setAddress($faker->address)
+                ->setIban($faker->ean8)
                 ->setCa($faker->randomFloat(2, 250, 35000));
             $manager->persist($customer);
         }
@@ -54,8 +55,8 @@ class AppFixtures extends Fixture
         $user->setRoles((array)'ROLE_ADMIN')
             ->setSector('Manager')
             ->setPassword($hash)
-            ->setEmail('admin@savpro.com')
-            ->setFirstName('admin')
+            ->setEmail('a@a.com')
+            ->setFirstName('a')
             ->setLastName('savpro');
         $manager->persist($user);
 
@@ -107,10 +108,7 @@ class AppFixtures extends Fixture
                 for ($q = 0; $q < mt_rand(5, 20); $q++) {
                     $quotations = new Quotations();
                     $montant = $faker->randomFloat(2, 250, 35000);
-                    $statu = $faker->randomElement(['Accepté',
-                        'Refusé',
-                        'En attente',
-                        'Réglé']);
+                    $statu = $faker->randomElement(['CANCELLED', 'WAIT', 'PAID']);
                     $date = $faker->dateTimeBetween('-6 months');
                     $quotations
                         ->setAmount($montant)
@@ -122,12 +120,12 @@ class AppFixtures extends Fixture
                     $chrono++;
                     $manager->persist($quotations);
                     /*Création de la facture si le devis est marqué comme Réglé*/
-                    if ($statu === 'Réglé') {
+                    if ($statu === 'PAID') {
                         $chronoInvoices = 1;
                         $invoice = new Invoices();
                         $invoice->setAmount($montant)
                             ->setStatus($faker->randomElement(['En attente de réglement',
-                                'Encaissé',
+                                'PAYED',
                             ]))
                             ->setSentAt($date)
                             ->setSeller($user)
@@ -142,8 +140,8 @@ class AppFixtures extends Fixture
             for ($eq = 0; $eq < mt_rand(1, 2); $eq++) {
                 $produits = new Equipments();
                 $images = 'https://picsum.photos/320/200?random=';
-                $imageId = $faker->numberBetween(1,99) .'.jpg';
-                $imageFaker =($images.$imageId);
+                $imageId = $faker->numberBetween(1, 99) . '.jpg';
+                $imageFaker = ($images . $imageId);
                 $produits->setName($faker->word)
                     ->setPicture($imageFaker)
                     ->setPrice($faker->numberBetween($min = 300, $max = 9000))

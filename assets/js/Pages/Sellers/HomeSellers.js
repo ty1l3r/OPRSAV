@@ -2,41 +2,24 @@ import React, {useState} from 'react';
 import Button from "@material-ui/core/Button";
 import "./Sellers.css"
 import ActuSellers from "./ActuSellers";
-import CreateQuotations from "./CreateQuotations";
+import Quotation from "./Quotation";
 import ReadQuotations from "./ReadQuotations";
 
 const HomeSellers = () => {
 
     const [myState, setMyState] = useState('quotations')
-    const goActu = () => {
-        setMyState('actu')
-    };
-    const goCreateQuotations = () => {
-        setMyState('createQuotations')
-    };
-    const goQuotations = () => {
-        setMyState('quotations')
-    };
-    const goEducation = () => {
-        setMyState('education')
-    };
-    const goSkills = () => {
-        setMyState('skills')
-    };
-    const goInterets = () => {
-        setMyState('interets')
-    };
-    const goAwards = () => {
-        setMyState('awards')
-    };
-    const goJson = () => {
-        setMyState('json')
-    }
+    const goActu = () => {setMyState('actu')};
+    const goCreateQuotations = () => {setMyState('createQuotations')};
+    const goQuotations = () => {setMyState('quotations')};
+    const goEducation = () => {setMyState('education')};
+    const goSkills = () => {setMyState('skills')};
+    const goInterets = () => {setMyState('interets')};
+    const goAwards = () => {setMyState('awards')};
+    const goJson = () => {setMyState('json')}
 
     return (
 
         <div className="container-fluid mt-3">
-
             <div className="row mt-4">
                 <div className="aProp col-xl-2 col-lg-3 col-md-11 col-sm-12 col-xs-12">
                     <ul className="aul">
@@ -84,7 +67,7 @@ const HomeSellers = () => {
                 </div>
                 <div className="col-xl-10 col-lg-9 col-md-12 col-sm-12 col-xs-12 padContent">
                     {myState === 'actu' ? <ActuSellers/> : <></>}
-                    {myState === 'createQuotations' ? <CreateQuotations/>: <></>}
+                    {myState === 'createQuotations' ? <Quotation/>: <></>}
                     {myState === 'quotations' ? <ReadQuotations/>: <></>}
 
 
