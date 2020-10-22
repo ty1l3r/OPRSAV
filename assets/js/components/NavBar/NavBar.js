@@ -58,7 +58,7 @@ const NavBar = ({ history }) => {
             <Toolbar>
                 <IconButton onClick={toogleDrawer} className={classes.menuIcon}
                             edge="start">
-                    <MenuIcon/>
+                <MenuIcon/>
                 </IconButton>
                 <Link to="/" underline="none" color="inherit" variant="h6">
                 </Link>
@@ -69,11 +69,8 @@ const NavBar = ({ history }) => {
                     <Button onClick={handleLogout} size="large">
                             LogOut
                     </Button>
-                </>
-                ||
-                <></>
+                </> || <></>
                 }
-
                 <Drawer anchor="left" variant="temporary" onClose={toogleDrawer} open={drawerOpen}>
                     <List className={classes.list} component="nav" aria-label="main mailbox folders">
                         {/*--------------------------------------------------------------------------------*/}
@@ -85,7 +82,9 @@ const NavBar = ({ history }) => {
                                     <HomeIcon className={classes.color}/>
                                 </Avatar>
                             </ListItemIcon>
-                            <ListItemText className={classes.align} primary="LoginPage"/>
+                            <Link className="nav-link" to="/admin">
+                                Acceuil
+                            </Link>
                         </ListItem>
                         <Divider/>
                         {/*--------------------------------------------------------------------------------*/}
@@ -95,7 +94,7 @@ const NavBar = ({ history }) => {
                                     <HomeIcon className={classes.color}/>
                                 </Avatar>
                             </ListItemIcon>
-                            <ListItemText className={classes.align} primary="SERVICES"/>
+                            <Link to="/devis">Liste des devis</Link>
                         </ListItem>
                         <Divider/>
                         {/*--------------------------------------------------------------------------------*/}
@@ -105,19 +104,24 @@ const NavBar = ({ history }) => {
                                     <ContactPhoneIcon className={classes.color}/>
                                 </Avatar>
                             </ListItemIcon>
-                            <ListItemText className={classes.align} primary="A Propos"/>
+                            <Link className="nav-link" to="/produits">
+                                Nos produits
+                            </Link>
                         </ListItem>
                         <Divider/>
                         {/*--------------------------------------------------------------------------------*/}
-                        <ListItem onClick={handleLogout}>
+                        <ListItem  onClick={toogleDrawer}>
                             <ListItemIcon>
                                 <Avatar>
                                     <ContactPhoneIcon className={classes.color}/>
                                 </Avatar>
                             </ListItemIcon>
-                            <ListItemText className={classes.align} primary="Déconnexion"/>
+                            <Link className="nav-link" to="/clients">
+                                Nos clients
+                            </Link>
                         </ListItem>
-
+                        <Divider/>
+                        {/*--------------------------------------------------------------------------------*/}
                     </List>
                 </Drawer>
             </Toolbar>

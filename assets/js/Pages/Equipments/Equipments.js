@@ -121,4 +121,5 @@ function Equipments() {
         </Fragment>
     );
 }
+
 export default Equipments;

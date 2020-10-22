@@ -10,7 +10,6 @@ function findAll(){
         .then(response => response.data["hydra:member"])
 }
 
-
 /**
  * Récupère tous les utilisateurs.
  * @returns {Promise<*>}
@@ -21,10 +20,6 @@ function findAllName(){
         .then(response => response.data["hydra:member"])
 }
 
-/*function deleteCustomer (id) {
-    return axios
-        .delete('http://localhost:8000/api/customers/' + id)
-}*/
 export default {
     findAll, findAllName
     /*delete: deleteCustomer*/

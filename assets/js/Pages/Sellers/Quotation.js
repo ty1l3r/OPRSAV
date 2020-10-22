@@ -14,25 +14,22 @@ const useStyles = makeStyles((theme) => ({
 function Quotation(props) {
 
     //savoir si c'est une création
-    const { id = 'new'} = props.match.params;
-
+    const {id = 'new'} = props.match.params;
 
     const classes = useStyles();
     const [customers, setCustomers] = useState([]);
     const [catchId, setCatchId] = useState();
     const [amount, setAmount] = useState();
+    const [editing, setEditing] = useState(false);
 
     const [newQuotation, setNewQuotation] = useState({
         "amount": '',
         "clientId": ''
     })
-/*
-    const [errors, setErros] = useState({
-        amount:"Le montant doit être écris en chiffre"
-    })*/
-
-    const [editing, setEditing] = useState(false);
-
+    /*
+        const [errors, setErros] = useState({
+            amount:"Le montant doit être écris en chiffre"
+        })*/
 
     const fetchQuotation = async id => {
         try {
@@ -54,13 +51,10 @@ function Quotation(props) {
         }
     }, [id]);
 
-
-
     const setSendData = () => {
         setNewQuotation({amount: parseFloat(amount), clientId: parseFloat(catchId)});
         console.log(newQuotation);
     }
-
     //envoyer les donnée du forme dans un tableau pour le submit
     const handleSubmit = async event => {
 
@@ -99,10 +93,9 @@ function Quotation(props) {
         <Fragment>
             <div className="container mt-5">
 
-                { (!editing && <h2 className="text-center">Créer un devis</h2>) || (
+                {(!editing && <h2 className="text-center">Créer un devis</h2>) || (
                     <h2 className="text-center">Modifier un devis</h2>
                 )}
-
                 <div className="row mt-5">
                     <div className="col-12">
                         <div className="row">
@@ -110,7 +103,6 @@ function Quotation(props) {
                                 <Link to="/devis">Retour aux devis</Link>
                             </div>
                         </div>
-
                         <form className={classes.root} onSubmit={handleSubmit} onClick={setSendData}>
                             <div className="card border-primary mb-3 fullDiv">
                                 <div className="card-title cardTitle">
@@ -133,7 +125,7 @@ function Quotation(props) {
                                 <div className="card-body cardPersoContent">
                                     <div className="form-group">
                                         <select className="custom-select" onChange={handleSelectId}>
-                                            <option value=""> </option>
+                                            <option value=""></option>
                                             {customers.map(customer =>
                                                 <option key={customer.iban}
                                                         value={customer.id}
@@ -142,12 +134,9 @@ function Quotation(props) {
                                                 </option>
                                             )}
                                         </select>
-
                                     </div>
-
                                 </div>
                             </div>
-
                             <button type="submit" className="btn btn-success">Envoyer</button>
                         </form>
                     </div>
@@ -156,4 +145,5 @@ function Quotation(props) {
         </Fragment>
     );
 }
+
 export default Quotation;

@@ -26,4 +26,5 @@ function ActuSellers(props) {
         </Fragment>
     );
 }
+
 export default ActuSellers;

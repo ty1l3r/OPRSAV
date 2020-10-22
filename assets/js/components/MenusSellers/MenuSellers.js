@@ -6,7 +6,7 @@ function MenuSellers(props) {
     return (
         <Fragment>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a className="navbar-brand" href="#"><span className="menuColor"> VENDEURS </span></a>
+                <a className="navbar-brand disabled" href="#"><span className="menuColor"> VENDEURS </span></a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
                         aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"> </span>
@@ -17,7 +17,7 @@ function MenuSellers(props) {
                             <a className="nav-link" href="#">Devis <span className="sr-only">(current)</span></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Factures</a>
+                            <a className="nav-link disabled" href="#">Factures</a>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/devis/new">
@@ -25,10 +25,10 @@ function MenuSellers(props) {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Créer factures</a>
+                            <a className="nav-link disabled" href="#">Créer factures</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Statistiques</a>
+                            <a className="nav-link disabled" href="#">Statistiques</a>
                         </li>
                     </ul>
                 </div>

@@ -45,7 +45,6 @@ const LoginPage = ({history}) => {
                 "les informations ne correspondent pas !\"");
         }
     };
-
     return (
         <Fragment>
             <div className="container mt-2 text-center">
@@ -54,36 +53,25 @@ const LoginPage = ({history}) => {
                     <form onSubmit={handleSubmit}>
                         <div className="row mt-5">
                             <div className="mt-4 col-12">
-                                <TextField id="outlined username"
-                                           htmlFor="username"
-                                           name="username"
-                                           value={credentials.username}
+                                <TextField id="outlined username" htmlFor="username"
+                                           name="username" value={credentials.username}
                                            label="Email" style={{margin: 8}}
                                            placeholder="Votre adresse email"
                                            className="loginInputs is-invalid"
                                            helperText="Utilisez votre adresse email @savpro.com"
-                                           margin="normal"
-                                           InputLabelProps={{shrink: true,}}
-                                           variant="outlined"
-                                           onChange={handleChange}
-                                />
+                                           margin="normal" InputLabelProps={{shrink: true,}}
+                                           variant="outlined" onChange={handleChange}/>
                             </div>
                         </div>
                         <div className="row">
                             <div className="mt-5 col-12">
                                 <TextField
-                                    id="outlined-password-input"
-                                    value={credentials.password}
-                                    htmlFor="password"
-                                    name="password"
-                                    className="loginInputs"
-                                    label="Password"
-                                    type="password"
-                                    autoComplete="current-password"
-                                    placeholder="Votre mot de passe"
-                                    variant="outlined"
-                                    onChange={handleChange}
-                                />
+                                    id="outlined-password-input" value={credentials.password}
+                                    htmlFor="password" name="password"
+                                    className="loginInputs" label="Password"
+                                    type="password" autoComplete="current-password"
+                                    placeholder="Votre mot de passe" variant="outlined"
+                                    onChange={handleChange}/>
                             </div>
                         </div>
                         <div className="row mt-4">

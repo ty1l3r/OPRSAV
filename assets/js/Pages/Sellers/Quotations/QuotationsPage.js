@@ -9,7 +9,6 @@ import FormLabel from "@material-ui/core/FormLabel";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import MenuSellers from "../../../components/MenusSellers/MenuSellers";
 
-
 function ReadQuotations() {
 
     /* STATE pagination */
@@ -23,18 +22,22 @@ function ReadQuotations() {
     const formatDate = (str) => moment(str).format('DD/MM/YYYY');
 
     //couleurs des status
-    const STATUS_CLASSES = {PAID : "success", WAIT:"info", CANCELLED:"danger"}
-    const STATUS_LABELS = {PAID: "Validé", WAIT: 'En attente', CANCELLED: 'Annulée'
+    const STATUS_CLASSES = {PAID: "success", WAIT: "info", CANCELLED: "danger"}
+    const STATUS_LABELS = {
+        PAID: "Validé", WAIT: 'En attente', CANCELLED: 'Annulée'
     }
     // Permet d'aller récupérer les quotations
     const fetchQuotations = async () => {
-        try {const data = await QuotationsAPI.findAll()
+        try {
+            const data = await QuotationsAPI.findAll()
             setQuotations(data);
         } catch (error) {
         }
     }
     // Au chargement on va chercher les composants.
-    useEffect(() => {fetchQuotations().then(r =>[] );}, []);
+    useEffect(() => {
+        fetchQuotations().then(r => []);
+    }, []);
 
     // Gestion du changement de page
     const handlePageChange = page => {
@@ -49,7 +52,7 @@ function ReadQuotations() {
     //Filtrage de la recherche
     const filteredEquipments = quotations.filter(
         q =>
-           /* q.client.name.toLowerCase().includes(searchQuotations.toLowerCase()) ||*/
+            /* q.client.name.toLowerCase().includes(searchQuotations.toLowerCase()) ||*/
             STATUS_LABELS[q.status].toLowerCase().includes(searchQuotations.toLowerCase()) ||
             q.amount.toString().includes(searchQuotations.toLowerCase())
     );
@@ -58,13 +61,11 @@ function ReadQuotations() {
     const paginateQuotations = Pagination.getData(filteredEquipments, currentPage, itemsPerPage)
     //Fonction Delete
     const handleDelete = (id) => {
-        /*console.log(id);*/
         const originalQuotations = [...quotations];
         setQuotations(quotations.filter(quotation => quotation.id !== id));
         QuotationsAPI.delete(id)
             .catch(error => {
                 setQuotations(originalQuotations);
-                /*console.log(error.response);*/
             });
     };
 
@@ -100,7 +101,6 @@ function ReadQuotations() {
                         <input type="text" onChange={handleSearch} value={searchQuotations} className="form-control"
                                placeholder="rechercher"
                         />
-
                     </div>
                     <table className="table table-hover tableBackground">
                         <thead>
@@ -128,29 +128,22 @@ function ReadQuotations() {
 
                                 </td>
                                 <td className="text-center">
-                                    { quotation.status === "PAID" ? <> </>
+                                    {quotation.status === "PAID" ? <> </>
                                         :
                                         <button className="btn btn-sm btn-primary danger"
-                                                onClick={ () => handleDelete(quotation.id)}
+                                                onClick={() => handleDelete(quotation.id)}
                                         >Supprimer</button>
                                     }
-
                                 </td>
                             </tr>
                         )}
                         </tbody>
-
                     </table>
-
                     <Pagination currentPage={currentPage}
                                 itemsPerPage={itemsPerPage}
                                 length={filteredEquipments.length}
                                 onPageChanged={handlePageChange}/>
-
-
                 </div>
-
-
             </div>
         </Fragment>
     );

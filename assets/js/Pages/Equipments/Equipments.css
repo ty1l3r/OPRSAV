@@ -1,13 +1,16 @@
-.imgZoom{
+.imgZoom {
     width: 320px !important;
 }
-.imgNonZoom{
+
+.imgNonZoom {
     width: 150px;
 }
-.picture{
+
+.picture {
     width: 50px;
 }
-.zoomImg{
+
+.zoomImg {
     margin-left: auto;
     margin-right: auto;
     display: table;

@@ -5,7 +5,6 @@ import NavBar from "./components/NavBar/NavBar";
 import Customers from "./Pages/Customers/Customers";
 import AuthAPI from "./Services/authAPI"
 import Equipments from "./Pages/Equipments/Equipments";
-import HomeSellers from "./Pages/Sellers/HomeSellers";
 import AuthContext from "./contexts/AuthContext";
 import HomeAdmin from "./Pages/Admin/HomeAdmin";
 import HomeTeck from "./Pages/Tech/HomeTeck";

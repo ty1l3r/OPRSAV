@@ -8,14 +8,30 @@ import ReadQuotations from "./ReadQuotations";
 const HomeSellers = () => {
 
     const [myState, setMyState] = useState('quotations')
-    const goActu = () => {setMyState('actu')};
-    const goCreateQuotations = () => {setMyState('createQuotations')};
-    const goQuotations = () => {setMyState('quotations')};
-    const goEducation = () => {setMyState('education')};
-    const goSkills = () => {setMyState('skills')};
-    const goInterets = () => {setMyState('interets')};
-    const goAwards = () => {setMyState('awards')};
-    const goJson = () => {setMyState('json')}
+    const goActu = () => {
+        setMyState('actu')
+    };
+    const goCreateQuotations = () => {
+        setMyState('createQuotations')
+    };
+    const goQuotations = () => {
+        setMyState('quotations')
+    };
+    const goEducation = () => {
+        setMyState('education')
+    };
+    const goSkills = () => {
+        setMyState('skills')
+    };
+    const goInterets = () => {
+        setMyState('interets')
+    };
+    const goAwards = () => {
+        setMyState('awards')
+    };
+    const goJson = () => {
+        setMyState('json')
+    }
 
     return (
 
@@ -67,9 +83,8 @@ const HomeSellers = () => {
                 </div>
                 <div className="col-xl-10 col-lg-9 col-md-12 col-sm-12 col-xs-12 padContent">
                     {myState === 'actu' ? <ActuSellers/> : <></>}
-                    {myState === 'createQuotations' ? <Quotation/>: <></>}
-                    {myState === 'quotations' ? <ReadQuotations/>: <></>}
-
+                    {myState === 'createQuotations' ? <Quotation/> : <></>}
+                    {myState === 'quotations' ? <ReadQuotations/> : <></>}
 
 
                     {/*{myState === 'experience' ? <CvExperience/> : <></>}
