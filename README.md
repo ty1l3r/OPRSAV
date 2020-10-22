@@ -14,13 +14,18 @@ App instructions.
 
 5°) npm install
 
-6°) php app/console doctrine:database:create
+6°) php bin/console doctrine:database:create
 
 7°) php bin/console doctrine:schema:update --force
 
-8°) php bin/console doctrine:fixtures:load (relancer si le faker créer une donnée identique)
+8°) php bin/console doctrine:fixtures:load 
+(Le faker genère parfois des données identiques:
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'a.regnier@savpro.com' for key 'UNIQ_1483A5E9E7927C74')
+Si tel est le cas, relancer la commande une nouvelle fois. 
 
 9°) ouvrir une console et lancer "symfony serve --no-tls"
+
+10°) copier/coller le fichier jwt en pièce jointe dans le repertoire "congif"
 
 10°) ouvrir une autre console et lancer "encore dev-server"
 

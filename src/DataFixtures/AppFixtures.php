@@ -50,15 +50,15 @@ class AppFixtures extends Fixture
         }
 
         /*Création de l'administrateur*/
-        $user = new Users();
-        $hash = $this->encoder->encodePassword($user, "password");
-        $user->setRoles((array)'ROLE_ADMIN')
+        $admin = new Users();
+        $hash = $this->encoder->encodePassword($admin, "password");
+        $admin->setRoles((array)'ROLE_ADMIN')
             ->setSector('Manager')
             ->setPassword($hash)
             ->setEmail('a@a.com')
             ->setFirstName('a')
             ->setLastName('savpro');
-        $manager->persist($user);
+        $manager->persist($admin);
 
         /*Création des utilisateurs*/
         for ($c = 0; $c < 30; $c++) {
@@ -103,6 +103,17 @@ class AppFixtures extends Fixture
                 $userTech[] = $user;
             }
 
+            //Création d'un devis pour l'admin (faire fonctionner l'app en mode admin)
+            $quotation = new Quotations();
+            $date = $faker->dateTimeBetween('-6 months');
+            $quotation  ->setClient($customer)
+                ->setSentAt($date)
+                ->setStatus('WAIT')
+                ->setAuthor($admin)
+                ->setClient($customer)
+                ->setAmount(3425434)
+                ->setChrono($chrono);
+            $manager->persist($quotation);
             /* Création des devis si l'utilisateur est un vendeur */
             if ($sector === 'vendeur') {
                 for ($q = 0; $q < mt_rand(5, 20); $q++) {
