@@ -8,27 +8,27 @@ App instructions.
 
 2°) Copier coller le fichier .env (envoyé en pièce jointe) à la racine du projet 
 
-3°) Configurer la ligne 32 du fichier .env avec vos infromations (mysql://VOTREUSERNAME:VOTREMOTDEPASSE@SERVEUR:PORT/SavPro)
+3°) copier/coller le fichier jwt en pièce jointe dans le repertoire "congif"
 
-4°) composer install
+4°) Configurer la ligne 32 du fichier .env avec vos infromations (mysql://VotreUserName:VotreMotDePasse@VotreServeur:PORT/NomDeLaBdd)
 
-5°) npm install
+5°) composer install
 
-6°) php bin/console doctrine:database:create
+6°) npm install
 
-7°) php bin/console doctrine:schema:update --force
+7°) php bin/console doctrine:database:create
 
-8°) php bin/console doctrine:fixtures:load 
+8°) php bin/console doctrine:schema:update --force
+
+9°) php bin/console doctrine:fixtures:load 
 (Le faker genère parfois des données identiques:
 SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'a.regnier@savpro.com' for key 'UNIQ_1483A5E9E7927C74')
 Si tel est le cas, relancer la commande une nouvelle fois. 
 
-9°) ouvrir une console et lancer "symfony serve --no-tls"
+10°) ouvrir une console et lancer "symfony serve --no-tls"
 
-10°) copier/coller le fichier jwt en pièce jointe dans le repertoire "congif"
+11°) ouvrir une autre console et lancer "encore dev-server"
 
-10°) ouvrir une autre console et lancer "encore dev-server"
+12°) rejoindre l'adresse du web server symfony
 
-11°) rejoindre l'adresse "http://127.0.0.1:8000 "
-
-12°) Pour se connecter à l'app: Email : "a@a.com", Password : "password"
+13°) Pour se connecter à l'app: Email : "a@a.com", Password : "password"
