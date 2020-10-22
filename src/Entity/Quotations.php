@@ -59,7 +59,7 @@ class Quotations
 
     /**
      * @ORM\ManyToOne(targetEntity=Customers::class, inversedBy="quotations")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      * @Groups({"quotations_read","customers_read" })
      */
     private $client;
