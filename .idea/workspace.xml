@@ -15,7 +15,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7165cd0-f933-48d6-97a5-2c483a9e7f52" name="Default Changelist" comment="V 1.01 - Add faker for admin quotations." />
+    <list default="true" id="c7165cd0-f933-48d6-97a5-2c483a9e7f52" name="Default Changelist" comment="V 1.02 - Readme">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Quotations.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Quotations.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -243,6 +247,8 @@
       <workItem from="1603358223776" duration="1715000" />
       <workItem from="1603362487275" duration="123000" />
       <workItem from="1603364670596" duration="507000" />
+      <workItem from="1603365821389" duration="279000" />
+      <workItem from="1603441413755" duration="308000" />
     </task>
     <task id="LOCAL-00001" summary="Install Symfo 4+ React (Last)">
       <created>1600180506881</created>
@@ -398,7 +404,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603365097723</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="V 1.02 - Readme">
+      <created>1603365881593</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1603365881593</updated>
+    </task>
+    <task id="LOCAL-00024" summary="V 1.02 - Readme">
+      <created>1603365983748</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1603365983748</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,7 +456,8 @@
     <MESSAGE value="EO Time" />
     <MESSAGE value="V 1.0 - savPro" />
     <MESSAGE value="V 1.01 - Add faker for admin quotations." />
-    <option name="LAST_COMMIT_MESSAGE" value="V 1.01 - Add faker for admin quotations." />
+    <MESSAGE value="V 1.02 - Readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="V 1.02 - Readme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1416" y="-311" key="#Inspections" timestamp="1603293575639">
@@ -504,10 +525,10 @@
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1602680609137" />
-    <state x="-1649" y="-247" key="Vcs.Push.Dialog.v2" timestamp="1603365108833">
+    <state x="-3309" y="-162" key="Vcs.Push.Dialog.v2" timestamp="1603366027620">
       <screen x="-3440" y="-687" width="3440" height="1350" />
     </state>
-    <state x="-1649" y="-247" key="Vcs.Push.Dialog.v2/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1603365108833" />
+    <state x="-3309" y="-162" key="Vcs.Push.Dialog.v2/0.23.1680.1027/0.-1057.1920.1057/-3440.-687.3440.1350@-3440.-687.3440.1350" timestamp="1603366027620" />
     <state x="-2911" y="-240" key="Vcs.Push.Dialog.v2/0.23.1680.962/0.-1057.1920.1057/-3440.-687.3440.1417@-3440.-687.3440.1417" timestamp="1603292956595" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.967/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600275782595" />
     <state x="4129" y="188" key="Vcs.Push.Dialog.v2/0.23.1680.973/1680.-106.1920.1057/3600.-259.3440.1417@3600.-259.3440.1417" timestamp="1600180509027" />
